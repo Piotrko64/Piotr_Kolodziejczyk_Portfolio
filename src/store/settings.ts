@@ -1,7 +1,5 @@
 import create from "zustand";
 
-const useSettings = create((set) => ({
-    bears: 0,
-
-    removeAllBears: () => set({ bears: 0 }),
+export const useSettings = create((set) => ({
+    nightMode: true,
 }));

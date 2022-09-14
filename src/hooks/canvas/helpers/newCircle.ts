@@ -1,13 +1,16 @@
 import { randomNumber } from "../../../utils/randomNumber";
 import { configCanvas } from "../configCanvas";
 
-const RGBNUMBERS = "247,205,77";
-
 const { MIN_SIZE, MAX_SIZE, MIN_SPEED, MAX_SPEED } = configCanvas;
 
-export function newCircle(ctx: CanvasRenderingContext2D, coordinateX: number, coordinateY: number) {
+export function newCircle(
+    ctx: CanvasRenderingContext2D,
+    coordinateX: number,
+    coordinateY: number,
+    colorRGB: string
+) {
     const speedX = randomNumber(MIN_SPEED, MAX_SPEED);
-    const speedY = randomNumber(MIN_SPEED, MAX_SPEED);
+    const speedY = -randomNumber(MIN_SPEED, MAX_SPEED);
 
     let xCoordinate = coordinateX;
     let yCoordinate = coordinateY;
@@ -24,10 +27,9 @@ export function newCircle(ctx: CanvasRenderingContext2D, coordinateX: number, co
             }
         },
         draw() {
-            ctx.fillStyle = `red`;
-            ctx.beginPath();
-            ctx.arc(xCoordinate, yCoordinate, size, 0, Math.PI * 2);
-            ctx.fill();
+            ctx.fillStyle = `RGBA(${colorRGB},${opacity})`;
+
+            ctx.fillRect(xCoordinate, yCoordinate, size, size);
         },
         size() {
             return size;

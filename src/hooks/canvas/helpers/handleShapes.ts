@@ -1,6 +1,6 @@
-import { CircleArrayType } from "../../../@types/Canvas/CircleArrayType";
+import { CircleArrayType } from "../../../@types/Canvas/ShapeArrayType";
 
-export function handleCircles(arrayCircle: CircleArrayType) {
+export function handleShapes(arrayCircle: CircleArrayType) {
     for (let i = 0; i < arrayCircle.length; i++) {
         arrayCircle[i].update();
         arrayCircle[i].draw();

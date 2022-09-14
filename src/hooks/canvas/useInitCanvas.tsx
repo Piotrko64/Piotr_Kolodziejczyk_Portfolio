@@ -1,10 +1,16 @@
 import { saveCoordinates } from "./helpers/saveCoordinates";
 import { updateCanvasSize } from "./helpers/updateCanvasSize";
-import { handleCircles } from "./helpers/handleCircles";
+import { handleShapes } from "./helpers/handleShapes";
 import { newCircle } from "./helpers/newCircle";
-import { CircleArrayType } from "../../@types/Canvas/CircleArrayType";
+import { CircleArrayType } from "../../@types/Canvas/ShapeArrayType";
+import { useSettings } from "../../store/settings";
+import { configCanvas } from "./configCanvas";
+import { randomNumber } from "../../utils/randomNumber";
 
 export function useInitCanvas() {
+    const nightMode = useSettings((state: any) => state.nightMode);
+    const { COLOR_DARK, COLOR_WHITE, BUBBLE_FOR_DARKMODE, BUBBLE_FOR_LIGHTMODE } = configCanvas;
+
     function animateCanvas(canvasElement: HTMLCanvasElement) {
         const ctx = canvasElement.getContext("2d")!;
         if (!ctx) return;
@@ -20,15 +26,23 @@ export function useInitCanvas() {
         });
 
         function init() {
+            if (randomNumber(0, 1) > 0) return;
             for (let i = 0; i < 1; i++) {
-                arrayCircle.push(newCircle(ctx, xCoordinate, yCoordinate));
+                arrayCircle.push(
+                    newCircle(
+                        ctx,
+                        xCoordinate,
+                        yCoordinate,
+                        nightMode ? BUBBLE_FOR_DARKMODE : BUBBLE_FOR_LIGHTMODE
+                    )
+                );
             }
         }
 
         function animate() {
-            ctx.fillStyle = "rgba(247,185,77,0.01)";
+            ctx.fillStyle = `${nightMode ? COLOR_DARK : COLOR_WHITE}`;
             ctx.fillRect(0, 0, canvasElement.width, canvasElement.height);
-            handleCircles(arrayCircle);
+            handleShapes(arrayCircle);
             requestAnimationFrame(animate);
         }
         animate();
