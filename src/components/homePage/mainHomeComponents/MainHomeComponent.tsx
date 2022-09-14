@@ -1,9 +1,15 @@
-import { WhoIAmMainComponent } from "./subComponents/whoIAm/WhoIAmMAinComponent";
+import { PhotoWithCirclesMainComponent } from "./subComponents/photoWithCircles/PhotoWithCirclesMainComponent";
+import { WhoIAmMainComponent } from "./subComponents/whoIAm/WhoIAmMainComponent";
+import classes from "./mainHomeComponent.module.css";
+import cx from "classnames";
 
 export function MainHomeComponent() {
     return (
-        <>
-            <WhoIAmMainComponent />
-        </>
+        <main className={classes.marginMain}>
+            <div className={cx(classes.flexRow, classes.container)}>
+                <WhoIAmMainComponent />
+                <PhotoWithCirclesMainComponent />
+            </div>
+        </main>
     );
 }

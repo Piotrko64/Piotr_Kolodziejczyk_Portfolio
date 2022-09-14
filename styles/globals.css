@@ -1,8 +1,8 @@
 :root {
     --mainBackColor: #1d1c2d;
-    --mainFontColor: "white";
+    --mainFontColor: white;
     --mainDark: #1d1c2d;
-    --mainWhite: "white";
+    --mainWhite: white;
     --violet: #8334bc;
     --yellow: #de953f;
     --red: #c53232;
@@ -14,6 +14,14 @@ body {
     margin: 0;
     font-family: "Lato", sans-serif;
     font-size: 26px;
+    background-color: var(--mainBackColor);
+    color: var(--mainFontColor);
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .boldViolet {

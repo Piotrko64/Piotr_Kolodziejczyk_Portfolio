@@ -1,0 +1,50 @@
+.size {
+    height: 455px;
+    aspect-ratio: 1;
+    border: 10px solid var(--mainBackColor);
+    border-radius: 50%;
+}
+.container {
+    position: relative;
+    width: fit-content;
+    margin-right: 80px;
+}
+
+.yellowCircle {
+    border-color: var(--yellow);
+    height: 50px;
+    top: -35px;
+    left: -15px;
+    border-width: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.yellowCircle:hover {
+    background-color: var(--yellow);
+    transform: translateY(-10px);
+}
+
+.redCircle {
+    border-color: var(--red);
+    height: 100px;
+    bottom: -20px;
+    right: 10px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.redCircle:hover {
+    background-color: var(--red);
+    transform: translateY(10px);
+}
+.violetCircle:hover {
+    background-color: var(--violet);
+    transform: translateX(-30px);
+}
+.violetCircle {
+    border-color: var(--violet);
+    height: 190px;
+    top: -90px;
+    right: -40px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
