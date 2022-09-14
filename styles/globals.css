@@ -3,7 +3,7 @@
     --mainFontColor: "white";
     --mainDark: #1d1c2d;
     --mainWhite: "white";
-    --violet: #b95ee9;
+    --violet: #8334bc;
     --yellow: #de953f;
     --red: #c53232;
 }
@@ -17,17 +17,17 @@ body {
 }
 
 .boldViolet {
-    font-weight: 700;
+    font-weight: 900;
     color: var(--violet);
 }
 
 .boldRed {
-    font-weight: 700;
+    font-weight: 900;
     color: var(--red);
 }
 
 .boldYellow {
-    font-weight: 700;
+    font-weight: 900;
     color: var(--yellow);
 }
 
@@ -38,4 +38,7 @@ a {
 
 * {
     box-sizing: border-box;
+}
+p {
+    margin: 0;
 }

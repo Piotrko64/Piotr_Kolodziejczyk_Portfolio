@@ -1,6 +1,4 @@
 .IAm {
-    font-size: 1.65rem;
-}
-.hello {
-    font-weight: 600;
+    font-size: 1.55rem;
+    text-shadow: -1px 4px 6px rgba(0, 0, 0, 0.15);
 }
