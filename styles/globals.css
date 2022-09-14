@@ -13,6 +13,22 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Lato", sans-serif;
+    font-size: 26px;
+}
+
+.boldViolet {
+    font-weight: 700;
+    color: var(--violet);
+}
+
+.boldRed {
+    font-weight: 700;
+    color: var(--red);
+}
+
+.boldYellow {
+    font-weight: 700;
+    color: var(--yellow);
 }
 
 a {

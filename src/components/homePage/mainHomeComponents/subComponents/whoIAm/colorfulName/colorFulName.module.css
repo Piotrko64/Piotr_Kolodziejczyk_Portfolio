@@ -7,9 +7,29 @@
     );
     text-transform: uppercase;
     background-clip: text;
-    font-size: 10rem;
+    font-size: 7.5rem;
     color: transparent;
     font-family: "Bebas Neue", cursive;
     background-size: 200%;
     width: fit-content;
+    animation: colorAnimation 5s linear infinite;
+    line-height: 0.95;
+}
+@keyframes colorAnimation {
+    0% {
+        background-position: 0% 100%;
+    }
+    10% {
+        background-position: 0% 80%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    70% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
 }

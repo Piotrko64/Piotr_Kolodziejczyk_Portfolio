@@ -1,9 +1,9 @@
-import { ColorfulName } from "./subComponents/whoIAm/colorfulName/ColorfulName";
+import { WhoIAmMainComponent } from "./subComponents/whoIAm/WhoIAmMAinComponent";
 
 export function MainHomeComponent() {
     return (
         <>
-            <ColorfulName />
+            <WhoIAmMainComponent />
         </>
     );
 }
