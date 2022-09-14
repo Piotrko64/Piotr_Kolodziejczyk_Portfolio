@@ -1,0 +1,9 @@
+.theCanvas {
+    background: var(--mainBackColor);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.relative {
+    position: relative;
+}

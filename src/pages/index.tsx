@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { CanvasContainer } from "../components/canvas/CanvasContainer";
 import { MainHomeComponent } from "../components/homePage/mainHomeComponents/MainHomeComponent";
 
 const Home: NextPage = () => {
@@ -11,9 +12,9 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main>
+            <CanvasContainer>
                 <MainHomeComponent />
-            </main>
+            </CanvasContainer>
 
             <footer></footer>
         </div>
