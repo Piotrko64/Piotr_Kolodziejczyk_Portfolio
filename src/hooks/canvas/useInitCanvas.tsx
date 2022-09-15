@@ -10,6 +10,7 @@ import { randomNumber } from "../../utils/randomNumber";
 export function useInitCanvas() {
     const nightMode = useSettings((state: any) => state.nightMode);
     const { COLOR_DARK, COLOR_WHITE, BUBBLE_FOR_DARKMODE, BUBBLE_FOR_LIGHTMODE } = configCanvas;
+    const { bubbleColor } = useSettings((state: any) => state);
 
     function animateCanvas(canvasElement: HTMLCanvasElement) {
         const ctx = canvasElement.getContext("2d")!;
@@ -21,6 +22,7 @@ export function useInitCanvas() {
         updateCanvasSize(canvasElement);
 
         window.addEventListener("mousemove", function (event) {
+            console.log(bubbleColor);
             [xCoordinate, yCoordinate] = saveCoordinates(event);
             init();
         });
@@ -28,14 +30,7 @@ export function useInitCanvas() {
         function init() {
             if (randomNumber(0, 1) > 0) return;
             for (let i = 0; i < 1; i++) {
-                arrayCircle.push(
-                    newCircle(
-                        ctx,
-                        xCoordinate,
-                        yCoordinate,
-                        nightMode ? BUBBLE_FOR_DARKMODE : BUBBLE_FOR_LIGHTMODE
-                    )
-                );
+                arrayCircle.push(newCircle(ctx, xCoordinate, yCoordinate, bubbleColor));
             }
         }
 
