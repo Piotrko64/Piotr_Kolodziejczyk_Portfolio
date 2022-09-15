@@ -15,7 +15,7 @@ export function newCircle(
     let xCoordinate = coordinateX;
     let yCoordinate = coordinateY;
     let size = randomNumber(MIN_SIZE, MAX_SIZE);
-    let opacity = randomNumber(15, 100) / 100;
+    let opacity = randomNumber(45, 100) / 100;
 
     return {
         update() {
@@ -23,7 +23,7 @@ export function newCircle(
             yCoordinate += speedY;
             if (size >= 0.2) {
                 size -= 0.15;
-                opacity -= 0.002;
+                opacity -= 0.001;
             }
         },
         draw() {
