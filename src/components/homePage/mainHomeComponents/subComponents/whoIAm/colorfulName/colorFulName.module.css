@@ -35,3 +35,24 @@
         background-position: 0% 100%;
     }
 }
+@media (max-width: 1320px) {
+    .name {
+        background-size: 150%;
+
+        margin: 35px 0;
+        font-size: 4.5rem;
+    }
+}
+@media (max-width: 760px) {
+    .name {
+        margin: 20px 0;
+        font-size: 4.2rem;
+    }
+}
+@media (max-width: 420px) {
+    .name {
+        line-height: 0.95;
+        margin: 15px 0;
+        font-size: 3.8rem;
+    }
+}

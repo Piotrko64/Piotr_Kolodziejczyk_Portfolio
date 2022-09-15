@@ -48,3 +48,82 @@
     transition: all 0.2s linear;
     cursor: pointer;
 }
+
+@media (max-width: 1320px) {
+    .container {
+        margin-top: 140px;
+        margin-right: 0;
+    }
+    .size {
+        height: 335px;
+    }
+}
+@media (max-width: 760px) {
+    .size {
+        height: 295px;
+    }
+    .yellowCircle {
+        height: 40px;
+        top: -35px;
+        left: -15px;
+        border-width: 4px;
+    }
+    .redCircle {
+        height: 60px;
+        bottom: -10px;
+        right: 15px;
+        border-width: 5px;
+    }
+    .violetCircle {
+        height: 125px;
+        top: -70px;
+        right: -30px;
+        border-width: 5px;
+    }
+}
+@media (max-width: 580px) {
+    .container {
+        margin-top: 100px;
+    }
+    .yellowCircle {
+        height: 35px;
+        top: -25px;
+        left: -10px;
+        border-width: 3px;
+    }
+    .violetCircle {
+        height: 105px;
+        top: -65px;
+        right: -20px;
+        border-width: 5px;
+    }
+    .size {
+        height: 235px;
+    }
+    .redCircle {
+        height: 55px;
+        bottom: -10px;
+        right: 15px;
+        border-width: 4px;
+    }
+}
+@media (max-width: 420px) {
+    .yellowCircle {
+        height: 30px;
+    }
+    .size {
+        height: 185px;
+    }
+    .violetCircle {
+        height: 90px;
+        top: -50px;
+        right: -20px;
+        border-width: 5px;
+    }
+    .redCircle {
+        height: 50px;
+        bottom: -15px;
+        right: 5px;
+        border-width: 4px;
+    }
+}
