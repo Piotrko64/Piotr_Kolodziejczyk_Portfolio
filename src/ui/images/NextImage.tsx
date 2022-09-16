@@ -15,7 +15,7 @@ export function NextImage({
         <div onClick={click}>
             <div className={cx(additionalClass, classes.relative)}>
                 <Image
-                    src={"./myPhotos/mePNG.png"}
+                    src={"/photos/mePNG.png"}
                     alt={""}
                     layout="fill"
                     objectFit="cover"
