@@ -45,14 +45,14 @@
 }
 @media (max-width: 760px) {
     .name {
-        margin: 20px 0;
+        margin: 30px 0;
         font-size: 4.2rem;
     }
 }
 @media (max-width: 420px) {
     .name {
         line-height: 0.95;
-        margin: 15px 0;
+        margin: 25px 0;
         font-size: 3.8rem;
     }
 }
