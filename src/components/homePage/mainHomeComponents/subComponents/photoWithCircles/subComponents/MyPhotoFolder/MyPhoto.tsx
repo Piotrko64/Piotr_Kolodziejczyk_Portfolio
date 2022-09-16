@@ -19,7 +19,7 @@ export function MyPhoto() {
                 />
             ))}
             <NextImage
-                img="/myPhotos/mePNG.png"
+                img={"/myPhotos/mePNG.png"}
                 additionalClass={classes.size}
                 click={() => changeBubbleColor(nightMode ? BUBBLE_FOR_DARKMODE : BUBBLE_FOR_LIGHTMODE)}
             />
