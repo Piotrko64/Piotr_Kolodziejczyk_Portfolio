@@ -43,13 +43,13 @@
     .marginMain {
         margin-left: 15px;
         margin-right: 15px;
-        margin-top: 30px;
+        margin-top: 40px;
     }
 }
 @media (max-width: 420px) {
     .marginMain {
         margin-left: 10px;
         margin-right: 10px;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 }
