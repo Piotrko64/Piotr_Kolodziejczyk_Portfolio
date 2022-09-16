@@ -1,5 +1,5 @@
 import { PhotoWithCirclesMainComponent } from "./subComponents/photoWithCircles/PhotoWithCirclesMainComponent";
-import { WhoIAmMainComponent } from "./subComponents/whoIAm/WhoIAmMainComponent";
+import { WhoIAmMainComponent } from "./subComponents/whoIAm/WhoIAmMain";
 import classes from "./mainHomeComponent.module.css";
 import cx from "classnames";
 
