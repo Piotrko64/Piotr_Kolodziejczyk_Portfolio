@@ -14,7 +14,14 @@ export function NextImage({
     return (
         <div onClick={click}>
             <div className={cx(additionalClass, classes.relative)}>
-                <Image src={img} alt={""} layout="fill" objectFit="cover" sizes="50vw" loading="eager" />
+                <Image
+                    src={"/myPhotos/mePNG.png"}
+                    alt={""}
+                    layout="fill"
+                    objectFit="cover"
+                    sizes="50vw"
+                    loading="eager"
+                />
             </div>
         </div>
     );
