@@ -1,4 +1,4 @@
-import { configPuppeteer } from "./../../api/githubData/configPuppeteer";
+import { configPuppeteer } from "../../config/configPuppeteer";
 import type { NextApiRequest, NextApiResponse } from "next";
 import puppeteer from "puppeteer";
 import { GithubApiResponse } from "../../@types/api/GithubApiResponse";

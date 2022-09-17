@@ -1,6 +1,6 @@
-import { DataForCanvasBubble } from "../../../../../../../data/DataForCanvasBubble";
+import { dataForCanvasBubble } from "../../../../../../../data/dataForCanvasBubble";
 
-const { yellow, red, violet } = DataForCanvasBubble;
+const { yellow, red, violet } = dataForCanvasBubble;
 
 export const dataToRenderCircle = [
     {
