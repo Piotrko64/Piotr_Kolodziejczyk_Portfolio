@@ -1,13 +1,22 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { configPuppeteer } from "./../../api/githubData/configPuppeteer";
+import type { NextApiRequest, NextApiResponse } from "next";
+import puppeteer from "puppeteer";
+import { GithubApiResponse } from "../../@types/api/GithubApiResponse";
 
-type Data = {
-  name: string
-}
+const URLGithub = "https://github.com/Piotrko64";
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  res.status(200).json({ name: 'John Doe' })
+export default async function handler(_req: NextApiRequest, res: NextApiResponse<GithubApiResponse>) {
+    const browser = await puppeteer.launch(configPuppeteer);
+    const page = await browser.newPage();
+    await page.goto(URLGithub);
+
+    const followersElementHTML = await page.$(".Link--secondary.no-underline.no-wrap > span");
+    const dataFollowers = await page.evaluate((element) => element?.innerHTML, followersElementHTML);
+
+    const numberProjectsElementHTML = await page.$(
+        ".UnderlineNav-body.width-full.p-responsive > a:nth-child(2) > span"
+    );
+    const dataProjects = await page.evaluate((element) => element?.innerHTML, numberProjectsElementHTML);
+
+    res.status(200).json({ followers: +dataFollowers!, numberProjects: +dataProjects! });
 }
