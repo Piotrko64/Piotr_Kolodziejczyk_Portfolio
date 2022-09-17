@@ -16,6 +16,11 @@
     line-height: 0.95;
     margin: 45px 0;
     filter: drop-shadow(2px 6px 8px rgba(0, 0, 0, 0.15));
+    transform: translateX(-90%);
+    transition: all 0.95s cubic-bezier(0.37, 0.5, 0.55, 1.37);
+}
+.show {
+    transform: translateX(0);
 }
 @keyframes colorAnimation {
     0% {
