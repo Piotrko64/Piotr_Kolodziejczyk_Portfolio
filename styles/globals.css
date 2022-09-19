@@ -47,6 +47,7 @@ a {
 
 * {
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 p {
     margin: 0;

@@ -1,54 +1,54 @@
 export const dataSkills = [
     {
-        name: "React",
-        iconName: "react.png",
+        name: "HTML",
+        iconName: "html.png",
+    },
+    {
+        name: "CSS",
+        iconName: "css.png",
     },
     {
         name: "Sass",
         iconName: "sass.png",
     },
-
     {
-        name: "Javascript",
+        name: "JavaScript",
         iconName: "js.png",
     },
     {
-        name: "HTML",
-        iconName: "html.png",
+        name: "TypeScript",
+        iconName: "ts.png",
+    },
+    {
+        name: "React",
+        iconName: "react.png",
+    },
+    {
+        name: "NextJs",
+        iconName: "next.png",
+    },
+    {
+        name: "Gatsby",
+        iconName: "gatsby.png",
+    },
+    {
+        name: "Cypress",
+        iconName: "cypress.png",
+    },
+    {
+        name: "MongoDB",
+        iconName: "mongo.png",
+    },
+    {
+        name: "MySQL",
+        iconName: "mysql.png",
+    },
+    {
+        name: "Vitest",
+        iconName: "vitest.png",
     },
     {
         name: "NodeJS",
         iconName: "nodejs.png",
-    },
-
-    {
-        name: "CSS",
-        iconName: "css.png",
-    },
-    {
-        name: "HTML",
-        iconName: "html.png",
-    },
-    {
-        name: "NodeJS",
-        iconName: "nodejs.png",
-    },
-
-    {
-        name: "CSS",
-        iconName: "css.png",
-    },
-    {
-        name: "HTML",
-        iconName: "html.png",
-    },
-    {
-        name: "NodeJS",
-        iconName: "nodejs.png",
-    },
-
-    {
-        name: "CSS",
-        iconName: "css.png",
     },
 ];
