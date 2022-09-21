@@ -8,7 +8,7 @@ export function TheHomePage() {
         <>
             <MainHomeComponent />
             <SkillsBoardMainComponent />
-
+            {process.env.URLPAGE}
             <BackgroundCirclesMainComponent>
                 <></>
             </BackgroundCirclesMainComponent>
