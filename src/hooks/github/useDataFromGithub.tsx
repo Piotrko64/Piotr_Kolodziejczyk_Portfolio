@@ -6,10 +6,12 @@ export function useDataFromGithub() {
     const [data, setData] = useState<false | ResultGithubData>(false);
 
     if (!data) {
-        axios.get(`/api/githubData`).then(({ data }) => {
-            setData(data);
-            console.log(data);
-        });
+        axios
+            .get(`https://myportfolio-piotrko64.vercel.app/api/githubData`)
+            .then(({ data }) => {
+                setData(data);
+                console.log(data);
+            });
     }
     console.log(data);
     return data;
