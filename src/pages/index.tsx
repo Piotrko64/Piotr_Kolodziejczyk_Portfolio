@@ -17,6 +17,7 @@ const Home: NextPage = ({ dataResult }: any) => {
 
             <CanvasContainer>
                 <TheHomePage />
+                {JSON.stringify(dataResult)}
             </CanvasContainer>
 
             <footer></footer>
@@ -26,17 +27,15 @@ const Home: NextPage = ({ dataResult }: any) => {
 
 export default Home;
 
-export async function getStaticProps(context: GetStaticPropsContext) {
+export async function getStaticProps() {
     const dataResult = await fetch(`${process.env.URLPAGE}/api/githubData`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
         },
-    })
-        .then((e) => e.json())
-        .then((data) => data);
-    console.log(dataResult);
+    });
+    const t = await dataResult.json();
     return {
-        props: { dataResult },
+        props: { dataResult: t },
     };
 }
