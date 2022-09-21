@@ -12,7 +12,7 @@ export function GithubInviteMainComponent() {
             <div className={classes.container}>
                 <div className={classes.title}>
                     <div>
-                        <ScrollParallax strength={0.08}>
+                        <ScrollParallax strength={0.05}>
                             <NextImage
                                 imgURL={"/assets/icons/githubIcon.png"}
                                 additionalClass={classes.image}

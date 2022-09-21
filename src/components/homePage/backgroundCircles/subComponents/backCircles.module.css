@@ -83,6 +83,7 @@
 @media (max-width: 420px) {
     .circle {
         border-width: 3px;
+        opacity: 0.6;
     }
     .yellowCircle {
         height: 18px;

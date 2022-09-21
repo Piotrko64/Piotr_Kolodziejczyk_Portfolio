@@ -1,5 +1,5 @@
 export const marqueeConfig = {
     gradient: false,
-    speed: 60,
+    speed: 40,
     pauseOnHover: true,
 };

@@ -1,5 +1,4 @@
 .marquee {
-    background-color: rgba(145, 145, 145, 0.03);
     margin-top: 100px;
 }
 @media (max-width: 980px) {
