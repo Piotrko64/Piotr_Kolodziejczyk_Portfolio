@@ -33,9 +33,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
         headers: {
             "Content-Type": "application/json",
         },
-    })
-        .then((e) => e.json())
-        .then((data) => data);
+    }).then((data) => data);
     console.log(dataResult);
     return {
         props: { dataResult },
