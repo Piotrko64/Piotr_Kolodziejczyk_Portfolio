@@ -8,5 +8,6 @@ export function useDataFromGithub() {
     if (!data) {
         axios.get(`/api/githubData`).then(({ data }) => setData(data));
     }
+    console.log(data);
     return data;
 }
