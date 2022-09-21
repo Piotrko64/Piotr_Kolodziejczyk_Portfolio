@@ -32,6 +32,18 @@ export const dataSkills = [
         iconName: "gatsby.png",
     },
     {
+        name: "Redux",
+        iconName: "redux.png",
+    },
+    {
+        name: "Styled Components",
+        iconName: "sc.png",
+    },
+    {
+        name: "Vue",
+        iconName: "vue.png",
+    },
+    {
         name: "Cypress",
         iconName: "cypress.png",
     },
@@ -50,5 +62,9 @@ export const dataSkills = [
     {
         name: "NodeJS",
         iconName: "nodejs.png",
+    },
+    {
+        name: "Git",
+        iconName: "git.png",
     },
 ];

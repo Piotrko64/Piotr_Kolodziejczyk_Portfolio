@@ -1,0 +1,104 @@
+.circle {
+    aspect-ratio: 1;
+    position: absolute;
+
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 50%;
+}
+.yellowCircle {
+    border-color: var(--yellow);
+    height: 50px;
+    top: 35px;
+    left: -15px;
+    border-width: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.redCircle {
+    border-color: var(--red);
+    height: 100px;
+    top: 240px;
+    right: 20px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.violetCircle {
+    border-color: var(--violet);
+    height: 240px;
+    bottom: 90px;
+    left: 50px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+@media (max-width: 1320px) {
+    .circle {
+        border-width: 5px;
+    }
+    .yellowCircle {
+        height: 40px;
+        top: 30px;
+        left: -12px;
+        border-width: 5px;
+    }
+
+    .redCircle {
+        height: 90px;
+        top: 220px;
+        right: 18px;
+    }
+
+    .violetCircle {
+        height: 210px;
+        bottom: 70px;
+        left: 40px;
+    }
+}
+@media (max-width: 780px) {
+    .circle {
+        border-width: 4px;
+        opacity: 0.8;
+    }
+    .yellowCircle {
+        height: 32px;
+        top: 65px;
+        left: -10px;
+    }
+
+    .redCircle {
+        height: 60px;
+        top: 250px;
+        right: 16px;
+    }
+
+    .violetCircle {
+        height: 180px;
+        bottom: 60px;
+        left: 30px;
+    }
+}
+@media (max-width: 420px) {
+    .circle {
+        border-width: 3px;
+    }
+    .yellowCircle {
+        height: 18px;
+        top: 92px;
+        left: -8px;
+    }
+
+    .redCircle {
+        height: 40px;
+        top: 220px;
+        right: 14px;
+    }
+
+    .violetCircle {
+        height: 110px;
+        bottom: 90px;
+        left: 30px;
+    }
+}
