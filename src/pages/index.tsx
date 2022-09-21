@@ -3,7 +3,7 @@ import Head from "next/head";
 import { CanvasContainer } from "../components/canvas/CanvasContainer";
 import { TheHomePage } from "../components/homePage/TheHomePage";
 
-const Home: NextPage = ({ dataResult }: any) => {
+const Home: NextPage = () => {
     return (
         <div>
             <Head>
@@ -26,16 +26,3 @@ const Home: NextPage = ({ dataResult }: any) => {
 };
 
 export default Home;
-
-export async function getStaticProps() {
-    const dataResult = await fetch(`${process.env.URLPAGE}/api/githubData`, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-        },
-    });
-    const t = await dataResult.json();
-    return {
-        props: { dataResult: t },
-    };
-}
