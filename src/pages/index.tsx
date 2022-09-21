@@ -1,9 +1,4 @@
-import type {
-    GetStaticPathsContext,
-    GetStaticProps,
-    GetStaticPropsContext,
-    NextPage,
-} from "next";
+import type { GetStaticPropsContext, NextPage } from "next";
 import Head from "next/head";
 import { CanvasContainer } from "../components/canvas/CanvasContainer";
 import { TheHomePage } from "../components/homePage/TheHomePage";
@@ -22,6 +17,7 @@ const Home: NextPage = ({ dataResult }: any) => {
 
             <CanvasContainer>
                 <TheHomePage />
+                {JSON.stringify(dataResult)}
             </CanvasContainer>
 
             <footer></footer>
