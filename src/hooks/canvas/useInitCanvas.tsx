@@ -28,13 +28,17 @@ export function useInitCanvas() {
         });
 
         function init() {
-            if (randomNumber(0, 1) > 0 || screen.availHeight < yCoordinate + window.scrollY) {
+            if (
+                randomNumber(0, 1) > 0 ||
+                screen.availHeight < yCoordinate + window.scrollY
+            ) {
                 return;
             }
 
             for (let i = 0; i < 1; i++) {
-                console.log(screen.height < yCoordinate + window.scrollY);
-                arrayCircle.push(newCircle(ctx, xCoordinate, yCoordinate, bubbleColor));
+                arrayCircle.push(
+                    newCircle(ctx, xCoordinate, yCoordinate, bubbleColor)
+                );
             }
         }
 

@@ -15,7 +15,7 @@ export function newCircle(
     let xCoordinate = coordinateX;
     let yCoordinate = coordinateY;
     let size = randomNumber(MIN_SIZE, MAX_SIZE);
-    let opacity = randomNumber(45, 100) / 100;
+    let opacity = randomNumber(10, 100) / 100;
 
     return {
         update() {

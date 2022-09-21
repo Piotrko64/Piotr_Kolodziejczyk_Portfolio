@@ -5,7 +5,7 @@ export const configCanvas = {
     MIN_SPEED: -2,
     MAX_SPEED: 4,
     MIN_SIZE: 14,
-    MAX_SIZE: 24,
+    MAX_SIZE: 20,
     BUBBLE_FOR_DARKMODE: "57, 57, 57",
     BUBBLE_FOR_LIGHTMODE: "230, 230, 230",
     COLOR_DARK: "RGB(29, 28, 45)",
