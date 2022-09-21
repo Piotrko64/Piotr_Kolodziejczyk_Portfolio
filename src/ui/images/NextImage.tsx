@@ -3,12 +3,12 @@ import cx from "classnames";
 import classes from "./nextImage.module.css";
 
 export function NextImage({
-    img,
+    imgURL,
     additionalClass,
     click,
     title,
 }: {
-    img: string;
+    imgURL: string;
     additionalClass: string;
     click?: () => void;
     title?: string;
@@ -17,7 +17,7 @@ export function NextImage({
         <div onClick={click}>
             <div className={cx(additionalClass, classes.relative)}>
                 <Image
-                    src={img}
+                    src={imgURL}
                     alt={title}
                     layout="fill"
                     objectFit="cover"

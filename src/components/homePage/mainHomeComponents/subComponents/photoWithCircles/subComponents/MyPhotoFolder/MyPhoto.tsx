@@ -19,9 +19,13 @@ export function MyPhoto() {
                 />
             ))}
             <NextImage
-                img={"/assets/images/mePNG.png"}
+                imgURL={"/assets/images/mePNG.png"}
                 additionalClass={classes.size}
-                click={() => changeBubbleColor(nightMode ? BUBBLE_FOR_DARKMODE : BUBBLE_FOR_LIGHTMODE)}
+                click={() =>
+                    changeBubbleColor(
+                        nightMode ? BUBBLE_FOR_DARKMODE : BUBBLE_FOR_LIGHTMODE
+                    )
+                }
             />
         </div>
     );

@@ -10,7 +10,7 @@ export function OneSkill({
 }) {
     return (
         <NextImage
-            img={`/assets/icons/${nameIcon}`}
+            imgURL={`/assets/icons/technologies/${nameIcon}`}
             additionalClass={classes.icon}
             title={title}
         />

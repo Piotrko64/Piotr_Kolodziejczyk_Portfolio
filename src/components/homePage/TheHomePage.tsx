@@ -8,11 +8,11 @@ export function TheHomePage() {
         <>
             <MainHomeComponent />
             <SkillsBoardMainComponent />
-            <GithubInviteMainComponent />
+
             <BackgroundCirclesMainComponent>
                 <></>
             </BackgroundCirclesMainComponent>
-            aaa
+
             <GithubInviteMainComponent />
         </>
     );
