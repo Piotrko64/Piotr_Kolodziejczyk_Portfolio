@@ -5,14 +5,6 @@ import { ResultGithubData } from "../../api/githubData/ResultGithubData";
 export function useDataFromGithub() {
     const [data, setData] = useState<false | ResultGithubData>(false);
 
-    if (!data) {
-        fetch(`/api/githubData`)
-            .then((e) => e.json())
-            .then((data) => {
-                setData(data);
-                console.log(data);
-            });
-    }
     console.log(data);
     return data;
 }
