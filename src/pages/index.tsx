@@ -17,7 +17,6 @@ const Home: NextPage = ({ dataResult }: any) => {
 
             <CanvasContainer>
                 <TheHomePage />
-                {JSON.stringify(dataResult)}
             </CanvasContainer>
 
             <footer></footer>
@@ -33,7 +32,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
         headers: {
             "Content-Type": "application/json",
         },
-    }).then((data) => data);
+    })
+        .then((e) => e.json())
+        .then((data) => data);
     console.log(dataResult);
     return {
         props: { dataResult },
