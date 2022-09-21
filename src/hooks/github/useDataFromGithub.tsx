@@ -8,7 +8,7 @@ export function useDataFromGithub() {
     if (!data) {
         fetch(`/api/githubData`)
             .then((e) => e.json())
-            .then(({ data }) => {
+            .then((data) => {
                 setData(data);
                 console.log(data);
             });
