@@ -32,7 +32,7 @@ const Home: NextPage = ({ dataResult }: any) => {
 export default Home;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-    const dataResult = await fetch("http://localhost:3000/api/githubData")
+    const dataResult = await fetch(`${process.env.URLPAGE}/api/githubData`)
         .then((e) => e.json())
         .then((data) => data);
     return {
