@@ -6,7 +6,7 @@ export function useDataFromGithub() {
     const [data, setData] = useState<false | ResultGithubData>(false);
 
     if (!data) {
-        fetch(`https://myportfolio-piotrko64.vercel.app/api/githubData`)
+        fetch(`/api/githubData`)
             .then((e) => e.json())
             .then(({ data }) => {
                 setData(data);
