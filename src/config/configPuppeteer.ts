@@ -1,1 +1,1 @@
-export const configPuppeteer = { headless: true, defaultViewport: null };
+export const configPuppeteer = { headless: false, defaultViewport: null };

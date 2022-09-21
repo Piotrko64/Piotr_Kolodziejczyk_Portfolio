@@ -1,8 +1,8 @@
-import { DecolarCircle } from "../../../ui/circles/DecolarCircle";
+import { DecolarCircle } from "../../../../ui/circles/DecolarCircle";
 import classes from "./backCircles.module.css";
 import cx from "classnames";
 import { ScrollParallax } from "react-just-parallax";
-import { dataBackgroundCircles } from "../../../data/dataBackgroundCircles";
+import { dataBackgroundCircles } from "../../../../data/dataBackgroundCircles";
 
 export function BackCircles() {
     return (
