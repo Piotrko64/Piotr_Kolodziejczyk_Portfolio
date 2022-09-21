@@ -17,7 +17,6 @@ const Home: NextPage = () => {
 
             <CanvasContainer>
                 <TheHomePage />
-                {JSON.stringify(dataResult)}
             </CanvasContainer>
 
             <footer></footer>
