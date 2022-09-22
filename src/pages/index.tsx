@@ -29,7 +29,7 @@ const Home: NextPage = ({
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
     const octokit = new Octokit({
         auth: process.env.TOKENGITHUB,
     });

@@ -1,10 +1,10 @@
-import { GithubApiResponse } from "../../@types/api/GithubApiResponse";
+import { PropsGithubApi } from "../../@types/api/GithubApiResponse";
 import { BackgroundCirclesMainComponent } from "./backgroundCircles/BackgroundCirclesMainComponent";
 import { GithubInviteMainComponent } from "./githubInvite/GithubInviteMainComponent";
 import { MainHomeComponent } from "./mainHomeComponents/MainHomeComponent";
 import { SkillsBoardMainComponent } from "./skillsBoard/SkillsBoardMainComponent";
 
-export function TheHomePage({ dataGithub }: { dataGithub: GithubApiResponse }) {
+export function TheHomePage({ dataGithub }: PropsGithubApi) {
     return (
         <>
             <MainHomeComponent />

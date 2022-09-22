@@ -4,10 +4,15 @@ import { basicObserverConfig } from "../../config/basicObserverConfig";
 export function useBasicObserver(htmlElement: RefObject<HTMLElement>) {
     const [isActive, setIsActive] = useState(false);
 
+    let wasUsing = false;
+
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             const [entry] = entries;
+            if (wasUsing) return;
             setIsActive(entry.isIntersecting);
+
+            wasUsing = true;
         }, basicObserverConfig);
 
         if (htmlElement) observer.observe(htmlElement.current!);

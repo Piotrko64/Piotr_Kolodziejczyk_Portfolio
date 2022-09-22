@@ -1,14 +1,13 @@
-import { GithubApiResponse } from "../../../@types/api/GithubApiResponse";
+import {
+    GithubApiResponse,
+    PropsGithubApi,
+} from "../../../@types/api/GithubApiResponse";
 import { NextImage } from "../../../ui/images/NextImage";
 import classes from "./githubInvite.module.css";
 import cx from "classnames";
 import { ScrollParallax } from "react-just-parallax";
 
-export function GithubInviteMainComponent({
-    dataGithub,
-}: {
-    dataGithub: GithubApiResponse;
-}) {
+export function GithubInviteMainComponent({ dataGithub }: PropsGithubApi) {
     const { followers, publicRepos } = dataGithub;
     return (
         <div className={classes.back}>
