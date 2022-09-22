@@ -24,17 +24,11 @@ export function GithubInviteMainComponent() {
                 </div>
                 <p>
                     Liczba prywatnych projektów:
-                    <span className={cx("boldRed", classes.span)}>
-                        {" "}
-                        {dataGithub && dataGithub.numberProjects}
-                    </span>
+                    <span className={cx("boldRed", classes.span)}> </span>
                 </p>
                 <p>
                     Liczba obserwatorów:
-                    <span className={cx("boldYellow", classes.span)}>
-                        {" "}
-                        {dataGithub && dataGithub.followers}
-                    </span>
+                    <span className={cx("boldYellow", classes.span)}> </span>
                 </p>
             </div>
         </div>

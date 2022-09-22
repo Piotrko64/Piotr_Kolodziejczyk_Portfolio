@@ -1,9 +1,11 @@
 import type { GetStaticPropsContext, NextPage } from "next";
 import Head from "next/head";
+import puppeteer from "puppeteer";
 import { CanvasContainer } from "../components/canvas/CanvasContainer";
 import { TheHomePage } from "../components/homePage/TheHomePage";
+import { configPuppeteer } from "../config/configPuppeteer";
 
-const Home: NextPage = ({ dataResult }: any) => {
+const Home: NextPage = (props: any) => {
     return (
         <div>
             <Head>
@@ -17,7 +19,7 @@ const Home: NextPage = ({ dataResult }: any) => {
 
             <CanvasContainer>
                 <TheHomePage />
-                {JSON.stringify(dataResult)}
+                {JSON.stringify(props.followers)}
             </CanvasContainer>
 
             <footer></footer>
@@ -28,16 +30,33 @@ const Home: NextPage = ({ dataResult }: any) => {
 export default Home;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-    const dataResult = await fetch(`${process.env.URLPAGE}/api/githubData`, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-        },
-    })
-        .then((e) => e.json())
-        .then((data) => data);
-    console.log(dataResult);
+    const URLGithub = "https://github.com/Piotrko64";
+
+    const browser = await puppeteer.launch(configPuppeteer);
+    const page = await browser.newPage();
+    await page.goto(URLGithub);
+
+    const followersElementHTML = await page.$(
+        ".Link--secondary.no-underline.no-wrap > span"
+    );
+    const dataFollowers = await page.evaluate(
+        (element) => element?.innerHTML,
+        followersElementHTML
+    );
+
+    const numberProjectsElementHTML = await page.$(
+        ".UnderlineNav-body.width-full.p-responsive > a:nth-child(2) > span"
+    );
+    const dataProjects = await page.evaluate(
+        (element) => element?.innerHTML,
+        numberProjectsElementHTML
+    );
+
+    browser.close();
     return {
-        props: { dataResult },
+        props: {
+            followers: +dataFollowers!,
+            numberProjects: +dataProjects!,
+        },
     };
 }
