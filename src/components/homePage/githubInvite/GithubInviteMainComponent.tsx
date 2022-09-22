@@ -1,12 +1,15 @@
-import { useDataFromGithub } from "../../../hooks/github/useDataFromGithub";
+import { GithubApiResponse } from "../../../@types/api/GithubApiResponse";
 import { NextImage } from "../../../ui/images/NextImage";
 import classes from "./githubInvite.module.css";
 import cx from "classnames";
 import { ScrollParallax } from "react-just-parallax";
 
-export function GithubInviteMainComponent() {
-    const dataGithub = useDataFromGithub();
-
+export function GithubInviteMainComponent({
+    dataGithub,
+}: {
+    dataGithub: GithubApiResponse;
+}) {
+    const { followers, publicRepos } = dataGithub;
     return (
         <div className={classes.back}>
             <div className={classes.container}>
@@ -24,11 +27,15 @@ export function GithubInviteMainComponent() {
                 </div>
                 <p>
                     Liczba prywatnych projektów:
-                    <span className={cx("boldRed", classes.span)}> </span>
+                    <span className={cx("boldRed", classes.span)}>
+                        {publicRepos}
+                    </span>
                 </p>
                 <p>
                     Liczba obserwatorów:
-                    <span className={cx("boldYellow", classes.span)}> </span>
+                    <span className={cx("boldYellow", classes.span)}>
+                        {followers}
+                    </span>
                 </p>
             </div>
         </div>

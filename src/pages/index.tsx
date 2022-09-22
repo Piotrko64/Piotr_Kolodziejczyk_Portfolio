@@ -1,11 +1,12 @@
 import type { GetStaticPropsContext, NextPage } from "next";
 import Head from "next/head";
+import { Octokit } from "octokit";
 import puppeteer from "puppeteer";
 import { CanvasContainer } from "../components/canvas/CanvasContainer";
 import { TheHomePage } from "../components/homePage/TheHomePage";
 import { configPuppeteer } from "../config/configPuppeteer";
 
-const Home: NextPage = (props: any) => {
+const Home: NextPage = (props) => {
     return (
         <div>
             <Head>
@@ -18,8 +19,7 @@ const Home: NextPage = (props: any) => {
             </Head>
 
             <CanvasContainer>
-                <TheHomePage />
-                {JSON.stringify(props.followers)}
+                <TheHomePage dataGithub={props} />
             </CanvasContainer>
 
             <footer></footer>
@@ -29,34 +29,19 @@ const Home: NextPage = (props: any) => {
 
 export default Home;
 
-export async function getStaticProps(context: GetStaticPropsContext) {
-    const URLGithub = "https://github.com/Piotrko64";
+export async function getStaticProps() {
+    const octokit = new Octokit({
+        auth: process.env.TOKENGITHUB,
+    });
 
-    const browser = await puppeteer.launch(configPuppeteer);
-    const page = await browser.newPage();
-    await page.goto(URLGithub);
-
-    const followersElementHTML = await page.$(
-        ".Link--secondary.no-underline.no-wrap > span"
-    );
-    const dataFollowers = await page.evaluate(
-        (element) => element?.innerHTML,
-        followersElementHTML
-    );
-
-    const numberProjectsElementHTML = await page.$(
-        ".UnderlineNav-body.width-full.p-responsive > a:nth-child(2) > span"
-    );
-    const dataProjects = await page.evaluate(
-        (element) => element?.innerHTML,
-        numberProjectsElementHTML
-    );
-
-    browser.close();
+    const dataGithub = await octokit.request("GET /users/Piotrko64", {
+        username: "Piotrko64",
+    });
+    const { followers, public_repos } = dataGithub.data;
     return {
         props: {
-            followers: +dataFollowers!,
-            numberProjects: +dataProjects!,
+            followers,
+            publicRepos: public_repos,
         },
     };
 }
