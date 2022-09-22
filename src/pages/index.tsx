@@ -1,12 +1,12 @@
-import type { GetStaticPropsContext, NextPage } from "next";
+import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import Head from "next/head";
 import { Octokit } from "octokit";
-import puppeteer from "puppeteer";
 import { CanvasContainer } from "../components/canvas/CanvasContainer";
 import { TheHomePage } from "../components/homePage/TheHomePage";
-import { configPuppeteer } from "../config/configPuppeteer";
 
-const Home: NextPage = (props) => {
+const Home: NextPage = ({
+    dataGithub,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <div>
             <Head>
@@ -19,7 +19,7 @@ const Home: NextPage = (props) => {
             </Head>
 
             <CanvasContainer>
-                <TheHomePage dataGithub={props} />
+                <TheHomePage dataGithub={dataGithub} />
             </CanvasContainer>
 
             <footer></footer>
@@ -29,7 +29,7 @@ const Home: NextPage = (props) => {
 
 export default Home;
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (context) => {
     const octokit = new Octokit({
         auth: process.env.TOKENGITHUB,
     });
@@ -40,8 +40,10 @@ export async function getStaticProps() {
     const { followers, public_repos } = dataGithub.data;
     return {
         props: {
-            followers,
-            publicRepos: public_repos,
+            dataGithub: {
+                followers,
+                publicRepos: public_repos,
+            },
         },
     };
-}
+};
