@@ -9,8 +9,36 @@ export default async function handler(
     _req: NextApiRequest,
     res: NextApiResponse<GithubApiResponse>
 ) {
-    res.status(404).json({
-        followers: 0,
-        numberProjects: 0,
-    });
+    try {
+        const browser = await puppeteer.launch(configPuppeteer);
+        const page = await browser.newPage();
+        await page.goto(URLGithub);
+
+        const followersElementHTML = await page.$(
+            ".Link--secondary.no-underline.no-wrap > span"
+        );
+        const dataFollowers = await page.evaluate(
+            (element) => element?.innerHTML,
+            followersElementHTML
+        );
+
+        const numberProjectsElementHTML = await page.$(
+            ".UnderlineNav-body.width-full.p-responsive > a:nth-child(2) > span"
+        );
+        const dataProjects = await page.evaluate(
+            (element) => element?.innerHTML,
+            numberProjectsElementHTML
+        );
+
+        browser.close();
+        res.status(200).json({
+            followers: +dataFollowers!,
+            numberProjects: +dataProjects!,
+        });
+    } catch (err) {
+        res.status(404).json({
+            followers: 0,
+            numberProjects: 0,
+        });
+    }
 }
