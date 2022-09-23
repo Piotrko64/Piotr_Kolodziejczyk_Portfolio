@@ -8,6 +8,10 @@
     flex-direction: column;
     width: 100%;
 }
+.lineInfo {
+    display: flex;
+    align-items: center;
+}
 .span {
     font-size: 1.3em;
     margin-left: 10px;

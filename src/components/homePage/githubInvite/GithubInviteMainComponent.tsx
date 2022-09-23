@@ -22,18 +22,18 @@ export function GithubInviteMainComponent({ dataGithub }: PropsGithubApi) {
                     <h2 className={classes.h2}>Odwiedź mojego Githuba</h2>
                     <div></div>
                 </div>
-                <p>
+                <div className={classes.lineInfo}>
                     Liczba prywatnych projektów:
-                    <span className={cx("boldRed", classes.span)}>
+                    <div className={cx("boldRed", classes.span)}>
                         <AnimatedCounter endNumber={publicRepos} />
-                    </span>
-                </p>
-                <p>
+                    </div>
+                </div>
+                <div className={classes.lineInfo}>
                     Liczba obserwatorów:
-                    <span className={cx("boldYellow", classes.span)}>
+                    <div className={cx("boldYellow", classes.span)}>
                         <AnimatedCounter endNumber={followers} />
-                    </span>
-                </p>
+                    </div>
+                </div>
             </div>
         </div>
     );

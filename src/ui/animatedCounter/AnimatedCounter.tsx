@@ -1,3 +1,4 @@
+import classes from "./animatedCounter.module.css";
 import { useEffect, useRef, useState } from "react";
 import { useBasicObserver } from "../../hooks/observerApi/useBasicObserver";
 
@@ -5,14 +6,15 @@ export function AnimatedCounter({ endNumber }: { endNumber: number }) {
     const numberCounter = useRef(null);
     const isVisible = useBasicObserver(numberCounter);
     const [actualNumber, setActualNumber] = useState(0);
+    const [speedTimeout, setSpeedTimeout] = useState(175);
 
     let interval: NodeJS.Timeout;
-    let speedTimeout = 110;
 
     function increaseActualNumber() {
         interval = setTimeout(() => {
             if (actualNumber < endNumber) {
-                setActualNumber((prev) => prev + 1);
+                setActualNumber((prevNumber) => prevNumber + 1);
+                setSpeedTimeout((prevState) => prevState - 5);
             }
         }, speedTimeout);
     }
@@ -26,5 +28,12 @@ export function AnimatedCounter({ endNumber }: { endNumber: number }) {
         };
     }, [isVisible, actualNumber]);
 
-    return <span ref={numberCounter}>{actualNumber}</span>;
+    return (
+        <div
+            ref={numberCounter}
+            className={actualNumber === endNumber ? classes.scale : ""}
+        >
+            {actualNumber}
+        </div>
+    );
 }
