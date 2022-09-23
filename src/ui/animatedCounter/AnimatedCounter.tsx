@@ -6,7 +6,7 @@ export function AnimatedCounter({ endNumber }: { endNumber: number }) {
     const numberCounter = useRef(null);
     const isVisible = useBasicObserver(numberCounter);
     const [actualNumber, setActualNumber] = useState(0);
-    const [speedTimeout, setSpeedTimeout] = useState(175);
+    const [speedTimeout, setSpeedTimeout] = useState(200);
 
     let interval: NodeJS.Timeout;
 
@@ -14,7 +14,7 @@ export function AnimatedCounter({ endNumber }: { endNumber: number }) {
         interval = setTimeout(() => {
             if (actualNumber < endNumber) {
                 setActualNumber((prevNumber) => prevNumber + 1);
-                setSpeedTimeout((prevState) => prevState - 5);
+                setSpeedTimeout((prevState) => prevState - 12);
             }
         }, speedTimeout);
     }

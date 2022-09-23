@@ -3,10 +3,9 @@ import Head from "next/head";
 import { Octokit } from "octokit";
 import { CanvasContainer } from "../components/canvas/CanvasContainer";
 import { TheHomePage } from "../components/homePage/TheHomePage";
-import chromium from "chrome-aws-lambda";
+
 const Home: NextPage = ({
     dataGithub,
-    other,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <div>
@@ -21,7 +20,6 @@ const Home: NextPage = ({
 
             <CanvasContainer>
                 <TheHomePage dataGithub={dataGithub} />
-                {JSON.stringify(other)}
             </CanvasContainer>
 
             <footer></footer>
@@ -32,38 +30,6 @@ const Home: NextPage = ({
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-    const URLGithub = "https://github.com/Piotrko64";
-
-    const browser = await chromium.puppeteer.launch({
-        args: [...chromium.args, "--hide-scrollbars", "--disable-web-security"],
-        defaultViewport: chromium.defaultViewport,
-        executablePath: await chromium.executablePath,
-        headless: true,
-        ignoreHTTPSErrors: true,
-    });
-    const page = await browser.newPage();
-    await page.goto(URLGithub);
-
-    const followersElementHTML = await page.$(
-        ".Link--secondary.no-underline.no-wrap > span"
-    );
-    const dataFollowers = await page.evaluate(
-        (element) => element?.innerHTML,
-        followersElementHTML
-    );
-
-    const numberProjectsElementHTML = await page.$(
-        ".UnderlineNav-body.width-full.p-responsive > a:nth-child(2) > span"
-    );
-    const dataProjects = await page.evaluate(
-        (element) => element?.innerHTML,
-        numberProjectsElementHTML
-    );
-
-    browser.close();
-
-    console.log(dataFollowers, dataProjects);
-
     const octokit = new Octokit({
         auth: process.env.TOKENGITHUB,
     });
@@ -77,10 +43,6 @@ export const getStaticProps: GetStaticProps = async () => {
             dataGithub: {
                 followers,
                 publicRepos: public_repos,
-            },
-            other: {
-                dataFollowers,
-                dataProjects,
             },
         },
     };
