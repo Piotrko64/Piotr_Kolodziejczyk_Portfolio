@@ -1,5 +1,5 @@
 export const basicObserverConfig = {
     root: null,
-    rootMargin: "0px",
+    rootMargin: "-100px",
     threshold: 0,
 };

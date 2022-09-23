@@ -1,5 +1,5 @@
+import { configCanvas } from "../../../config/configCanvas";
 import { randomNumber } from "../../../utils/randomNumber";
-import { configCanvas } from "../configCanvas";
 
 const { MIN_SIZE, MAX_SIZE, MIN_SPEED, MAX_SPEED } = configCanvas;
 

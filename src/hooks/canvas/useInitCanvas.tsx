@@ -4,8 +4,8 @@ import { handleShapes } from "./helpers/handleShapes";
 import { newCircle } from "./helpers/newCircle";
 import { CircleArrayType } from "../../@types/Canvas/ShapeArrayType";
 import { useSettings } from "../../store/settings";
-import { configCanvas } from "./configCanvas";
 import { randomNumber } from "../../utils/randomNumber";
+import { configCanvas } from "../../config/configCanvas";
 
 export function useInitCanvas() {
     const nightMode = useSettings((state: any) => state.nightMode);

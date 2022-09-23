@@ -1,4 +1,4 @@
-import { configCanvas } from "../../../../../../../hooks/canvas/configCanvas";
+import { configCanvas } from "../../../../../../../config/configCanvas";
 import { useSettings } from "../../../../../../../store/settings";
 import { DecolarCircle } from "../../../../../../../ui/circles/DecolarCircle";
 import { NextImage } from "../../../../../../../ui/images/NextImage";

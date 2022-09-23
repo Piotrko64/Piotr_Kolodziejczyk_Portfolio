@@ -1,11 +1,9 @@
-import {
-    GithubApiResponse,
-    PropsGithubApi,
-} from "../../../@types/api/GithubApiResponse";
+import { PropsGithubApi } from "../../../@types/api/GithubApiResponse";
 import { NextImage } from "../../../ui/images/NextImage";
 import classes from "./githubInvite.module.css";
 import cx from "classnames";
 import { ScrollParallax } from "react-just-parallax";
+import { AnimatedCounter } from "../../../ui/animatedCounter/AnimatedCounter";
 
 export function GithubInviteMainComponent({ dataGithub }: PropsGithubApi) {
     const { followers, publicRepos } = dataGithub;
@@ -27,13 +25,13 @@ export function GithubInviteMainComponent({ dataGithub }: PropsGithubApi) {
                 <p>
                     Liczba prywatnych projektów:
                     <span className={cx("boldRed", classes.span)}>
-                        {publicRepos}
+                        <AnimatedCounter endNumber={publicRepos} />
                     </span>
                 </p>
                 <p>
                     Liczba obserwatorów:
                     <span className={cx("boldYellow", classes.span)}>
-                        {followers}
+                        <AnimatedCounter endNumber={followers} />
                     </span>
                 </p>
             </div>
