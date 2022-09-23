@@ -6,6 +6,7 @@ import { TheHomePage } from "../components/homePage/TheHomePage";
 import chromium from "chrome-aws-lambda";
 const Home: NextPage = ({
     dataGithub,
+    other,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <div>
@@ -20,6 +21,7 @@ const Home: NextPage = ({
 
             <CanvasContainer>
                 <TheHomePage dataGithub={dataGithub} />
+                {JSON.stringify(other)}
             </CanvasContainer>
 
             <footer></footer>
@@ -75,6 +77,10 @@ export const getStaticProps: GetStaticProps = async () => {
             dataGithub: {
                 followers,
                 publicRepos: public_repos,
+            },
+            other: {
+                dataFollowers,
+                dataProjects,
             },
         },
     };
