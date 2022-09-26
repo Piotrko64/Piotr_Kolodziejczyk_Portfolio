@@ -2,6 +2,7 @@ import { PropsGithubApi } from "../../@types/api/GithubApiResponse";
 import { BackgroundCirclesMainComponent } from "./backgroundCircles/BackgroundCirclesMainComponent";
 import { GithubInviteMainComponent } from "./githubInvite/GithubInviteMainComponent";
 import { MainHomeComponent } from "./mainHomeComponents/MainHomeComponent";
+import { SelectedProjectsMainComponent } from "./selectedProjects/SelectedProjectsMainComponent";
 import { SkillsBoardMainComponent } from "./skillsBoard/SkillsBoardMainComponent";
 
 export function TheHomePage({ dataGithub }: PropsGithubApi) {
@@ -11,10 +12,11 @@ export function TheHomePage({ dataGithub }: PropsGithubApi) {
             <SkillsBoardMainComponent />
 
             <BackgroundCirclesMainComponent>
-                <></>
+                <>
+                    <SelectedProjectsMainComponent />
+                    <GithubInviteMainComponent dataGithub={dataGithub} />
+                </>
             </BackgroundCirclesMainComponent>
-
-            <GithubInviteMainComponent dataGithub={dataGithub} />
         </>
     );
 }

@@ -9,7 +9,7 @@ export function BackgroundCirclesMainComponent({
     return (
         <div className={classes.background}>
             <BackCircles />
-            {children}
+            <div className={classes.zIndex}> {children}</div>
         </div>
     );
 }
