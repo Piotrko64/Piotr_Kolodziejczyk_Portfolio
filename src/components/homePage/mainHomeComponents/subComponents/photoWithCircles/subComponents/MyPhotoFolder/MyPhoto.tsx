@@ -19,7 +19,7 @@ export function MyPhoto() {
                 />
             ))}
             <NextImage
-                imgURL={"/assets/images/mePNG.png"}
+                imgURL={"/assets/images/me.jpg"}
                 additionalClass={classes.size}
                 click={() =>
                     changeBubbleColor(
