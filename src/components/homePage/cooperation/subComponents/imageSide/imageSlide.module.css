@@ -1,0 +1,21 @@
+.icon {
+    height: 140px;
+    width: 140px;
+    position: relative;
+    margin: 0 35px;
+}
+.firstLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 4rem;
+}
+.equal {
+    scale: 1.4;
+}
