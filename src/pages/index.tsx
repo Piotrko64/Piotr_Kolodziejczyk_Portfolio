@@ -1,16 +1,14 @@
-import { GraphQLClient, gql } from "graphql-request";
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import Head from "next/head";
 import { Octokit } from "octokit";
-import { getProjects } from "../../graphql/getProjects";
+import { getProjectsData } from "../../graphql/SSG/getProjectsData";
 import { CanvasContainer } from "../components/canvas/CanvasContainer";
 import { TheHomePage } from "../components/homePage/TheHomePage";
 
 const Home: NextPage = ({
     dataGithub,
-    projects,
+    dataProjects,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-    console.log(process.env.KEYHYGRAPH);
     return (
         <div>
             <Head>
@@ -25,7 +23,7 @@ const Home: NextPage = ({
             <CanvasContainer>
                 <TheHomePage dataGithub={dataGithub} />
             </CanvasContainer>
-            {JSON.stringify(projects)}
+            {JSON.stringify(dataProjects)}
         </div>
     );
 };
@@ -40,27 +38,10 @@ export const getStaticProps: GetStaticProps = async () => {
     const dataGithub = await octokit.request("GET /users/Piotrko64", {
         username: "Piotrko64",
     });
+
     const { followers, public_repos } = dataGithub.data;
 
-    const key = `Bearer ${process.env.KEYHYGRAPH}`;
-
-    const query = gql`
-        query {
-            projects {
-                mainImage {
-                    url
-                }
-            }
-        }
-    `;
-
-    const hygraph = new GraphQLClient(process.env.HYGRAPHAPIURL!, {
-        headers: {
-            Authorization: key,
-        },
-    });
-
-    const projects = await hygraph.request(query);
+    const dataProjects = await getProjectsData();
 
     return {
         props: {
@@ -68,6 +49,7 @@ export const getStaticProps: GetStaticProps = async () => {
                 followers,
                 publicRepos: public_repos,
             },
+            dataProjects,
         },
     };
 };

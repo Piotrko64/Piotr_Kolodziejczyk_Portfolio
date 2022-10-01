@@ -1,0 +1,8 @@
+.slide {
+    max-width: 40%;
+    background-color: rgba(250, 235, 215, 0.623);
+}
+.container {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,23 @@
+.heart {
+    stroke-dasharray: 560;
+    stroke-dashoffset: 500;
+    width: 150px;
+    animation: 4s ease-in forwards draw infinite reverse;
+}
+.path {
+    stroke: var(--mainFontColor);
+}
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 520;
+    }
+    30% {
+        stroke-dashoffset: 0;
+    }
+    70% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 520;
+    }
+}

@@ -1,5 +1,5 @@
-export const getProjects = `{
-  projects {
+export const projectsQuery = `{
+  projectsID {
     mainImage {
       url
     }
