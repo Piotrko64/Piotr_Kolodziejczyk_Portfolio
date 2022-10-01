@@ -1,11 +1,13 @@
+import useTranslation from "next-translate/useTranslation";
 import { BigTitle } from "../../../ui/bigTitle/BigTitle";
-import { HeartSVG } from "./subComponents/imageSide/svg/heartSVG/HeartSVG";
+import { ImageSide } from "./subComponents/imageSide/ImageSide";
 
 export function Cooperation() {
+    const { t } = useTranslation("titles");
     return (
         <>
-            <BigTitle title="Współpraca" />
-            <HeartSVG />
+            <BigTitle title={t("coop")} />
+            <ImageSide />
         </>
     );
 }

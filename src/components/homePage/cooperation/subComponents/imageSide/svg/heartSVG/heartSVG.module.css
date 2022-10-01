@@ -2,7 +2,7 @@
     stroke-dasharray: 560;
     stroke-dashoffset: 500;
     width: 150px;
-    animation: 4s ease-in forwards draw infinite reverse;
+    animation: 4.5s ease-in forwards draw infinite reverse;
 }
 .path {
     stroke: var(--mainFontColor);
@@ -11,7 +11,7 @@
     0% {
         stroke-dashoffset: 520;
     }
-    30% {
+    35% {
         stroke-dashoffset: 0;
     }
     70% {
