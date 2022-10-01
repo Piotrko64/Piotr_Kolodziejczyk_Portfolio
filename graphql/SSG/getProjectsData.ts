@@ -2,7 +2,7 @@ import { gql, GraphQLClient } from "graphql-request";
 import { projectsQuery } from "../queries/projectsQuery";
 
 export async function getProjectsData() {
-    const hygraph = new GraphQLClient(process.env.HYGRAPHAPURL!, {
+    const hygraph = new GraphQLClient(process.env.HYGRAPHURL!, {
         headers: {
             Authorization: `Bearer ${process.env.KEYHYGRAPH}`,
         },
