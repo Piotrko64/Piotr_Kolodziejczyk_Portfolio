@@ -1,3 +1,44 @@
 .color {
     stroke: var(--mainFontColor);
 }
+.width {
+    width: 120px;
+}
+.heart {
+    stroke-dasharray: 560;
+    stroke-dashoffset: 500;
+
+    animation: 4.5s ease-in forwards draw infinite reverse;
+}
+.path {
+    stroke: var(--mainFontColor);
+}
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 520;
+    }
+    35% {
+        stroke-dashoffset: 0;
+    }
+    70% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 520;
+    }
+}
+@media (max-width: 920px) {
+    .width {
+        width: 80px;
+    }
+}
+@media (max-width: 570px) {
+    .width {
+        width: 50px;
+    }
+}
+@media (max-width: 440px) {
+    .width {
+        width: 40px;
+    }
+}

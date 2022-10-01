@@ -21,3 +21,18 @@
         stroke-dashoffset: 520;
     }
 }
+@media (max-width: 920px) {
+    .heart {
+        width: 140px;
+    }
+}
+@media (max-width: 570px) {
+    .heart {
+        width: 110px;
+    }
+}
+@media (max-width: 440px) {
+    .heart {
+        width: 90px;
+    }
+}

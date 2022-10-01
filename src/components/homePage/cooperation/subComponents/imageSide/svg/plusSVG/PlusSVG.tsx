@@ -8,6 +8,7 @@ export function PlusSVG() {
             viewBox="0 0 77 77"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className={classes.width}
         >
             <path
                 d="M38.5 4V73M73 38.5H4"
