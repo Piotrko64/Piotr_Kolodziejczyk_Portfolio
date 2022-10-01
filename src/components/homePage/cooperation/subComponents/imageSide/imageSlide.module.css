@@ -21,34 +21,12 @@
 }
 @media (max-width: 920px) {
     .icon {
-        height: 120px;
-        width: 120px;
+        height: 100px;
+        width: 100px;
 
         margin: 0 25px;
     }
     .container {
         font-size: 3.4rem;
-    }
-}
-@media (max-width: 570px) {
-    .icon {
-        height: 100px;
-        width: 100px;
-
-        margin: 0 20px;
-    }
-    .container {
-        font-size: 3.2rem;
-    }
-}
-@media (max-width: 440px) {
-    .icon {
-        height: 60px;
-        width: 60px;
-
-        margin: 0 10px;
-    }
-    .container {
-        font-size: 2.8rem;
     }
 }

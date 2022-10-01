@@ -23,7 +23,6 @@ const Home: NextPage = ({
             <CanvasContainer>
                 <TheHomePage dataGithub={dataGithub} />
             </CanvasContainer>
-            {JSON.stringify(dataProjects)}
         </div>
     );
 };

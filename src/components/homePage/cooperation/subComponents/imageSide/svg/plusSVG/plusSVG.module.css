@@ -34,11 +34,6 @@
 }
 @media (max-width: 570px) {
     .width {
-        width: 50px;
-    }
-}
-@media (max-width: 440px) {
-    .width {
-        width: 40px;
+        width: 70px;
     }
 }
