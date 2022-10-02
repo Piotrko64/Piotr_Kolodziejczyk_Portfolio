@@ -1,32 +1,39 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import classes from "./carousel.module.css";
-import "swiper/css";
+
+import { useKeenSlider } from "keen-slider/react"; // import from 'keen-slider/react.es' for to get an
 import { ResponseProjectsData } from "../../../../../@types/graphql/ResponseProjectsData";
+import { OneProject } from "../oneProject/OneProject";
 
 export function Carousel({
     dataProjects,
 }: {
     dataProjects: ResponseProjectsData;
 }) {
+    const [sliderRef] = useKeenSlider({
+        slides: {
+            perView: 2.5,
+            spacing: 15,
+            origin: "center",
+        },
+        loop: true,
+        range: {
+            min: -5,
+            max: 5,
+        },
+    });
+
     return (
-        <Swiper
-            spaceBetween={50}
-            slidesPerView={"auto"}
-            loop
-            className={classes.container}
-            grabCursor={true}
-            centeredSlides={true}
-            initialSlide={1}
-            autoplay={{
-                delay: 3500,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: false,
-            }}
-            observer
-        >
-            <SwiperSlide className={classes.slide}>Slide 2</SwiperSlide>
-            <SwiperSlide className={classes.slide}>Slide 3e</SwiperSlide>
-            ...
-        </Swiper>
+        <div ref={sliderRef} className={classes.container}>
+            {dataProjects.projectsID.map((project) => (
+                <OneProject key={project.title} dataProject={project} />
+            ))}
+            {dataProjects.projectsID.map((project) => (
+                <OneProject key={project.title} dataProject={project} />
+            ))}
+            {dataProjects.projectsID.map((project) => (
+                <OneProject key={project.title} dataProject={project} />
+            ))}
+        </div>
     );
 }

@@ -11,12 +11,8 @@ export interface Child {
     children: Child2[];
 }
 
-export interface Raw {
-    children: Child[];
-}
-
 export interface Describe {
-    raw: Raw;
+    raw: any;
 }
 
 export interface Child4 {
@@ -33,10 +29,10 @@ export interface Raw2 {
 }
 
 export interface DescribePl {
-    raw: Raw2;
+    raw: any;
 }
 
-export interface ProjectsID {
+export interface OneProjectInterface {
     mainImage: MainImage;
     describe: Describe;
     describePl: DescribePl;
@@ -44,8 +40,9 @@ export interface ProjectsID {
     title: string;
     liveLink?: any;
     githubLink: string;
+    technologies: string[];
 }
 
 export interface ResponseProjectsData {
-    projectsID: ProjectsID[];
+    projectsID: OneProjectInterface[];
 }

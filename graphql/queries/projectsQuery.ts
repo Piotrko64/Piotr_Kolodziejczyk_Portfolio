@@ -13,6 +13,6 @@ export const projectsQuery = `{
     title
     liveLink
     githubLink
-   
+   technologies
   }
 }`;
