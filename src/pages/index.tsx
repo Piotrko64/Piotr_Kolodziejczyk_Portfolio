@@ -2,6 +2,7 @@ import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import Head from "next/head";
 import { Octokit } from "octokit";
 import { getProjectsData } from "../../graphql/SSG/getProjectsData";
+import { ResponseProjectsData } from "../@types/graphql/ResponseProjectsData";
 import { CanvasContainer } from "../components/canvas/CanvasContainer";
 import { TheHomePage } from "../components/homePage/TheHomePage";
 
@@ -21,7 +22,10 @@ const Home: NextPage = ({
             </Head>
 
             <CanvasContainer>
-                <TheHomePage dataGithub={dataGithub} />
+                <TheHomePage
+                    dataGithub={dataGithub}
+                    dataProjects={dataProjects}
+                />
             </CanvasContainer>
         </div>
     );
@@ -40,7 +44,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
     const { followers, public_repos } = dataGithub.data;
 
-    const dataProjects = await getProjectsData();
+    const dataProjects: ResponseProjectsData = await getProjectsData();
 
     return {
         props: {

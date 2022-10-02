@@ -4,15 +4,15 @@ export const projectsQuery = `{
       url
     }
     describe {
-      markdown
+      raw
     }
     describePl {
-      markdown
+      raw
     }
     titlePl
     title
     liveLink
     githubLink
-    onHomePage
+   
   }
 }`;
