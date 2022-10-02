@@ -40,21 +40,16 @@
     }
     .yellowCircle {
         height: 40px;
-        top: 90px;
-        left: -12px;
+
         border-width: 5px;
     }
 
     .redCircle {
         height: 90px;
-        top: 390px;
-        right: 18px;
     }
 
     .violetCircle {
         height: 210px;
-        bottom: 70px;
-        left: 40px;
     }
 }
 @media (max-width: 780px) {
@@ -64,20 +59,14 @@
     }
     .yellowCircle {
         height: 32px;
-        top: 85px;
-        left: -10px;
     }
 
     .redCircle {
         height: 60px;
-        top: 360px;
-        right: 16px;
     }
 
     .violetCircle {
         height: 180px;
-        bottom: 300px;
-        left: 30px;
     }
 }
 @media (max-width: 420px) {
@@ -87,19 +76,17 @@
     }
     .yellowCircle {
         height: 18px;
-        top: 92px;
-        left: -8px;
+        top: 3%;
+        left: 8px;
     }
 
     .redCircle {
-        height: 40px;
-        top: 320px;
-        right: 14px;
+        display: none;
     }
 
     .violetCircle {
         height: 110px;
-        bottom: 300px;
+        bottom: 27%;
         left: 30px;
     }
 }
