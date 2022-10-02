@@ -9,7 +9,7 @@
 .yellowCircle {
     border-color: var(--yellow);
     height: 50px;
-    top: 100px;
+    top: 180px;
     left: -15px;
     border-width: 6px;
     cursor: pointer;
@@ -19,7 +19,7 @@
 .redCircle {
     border-color: var(--red);
     height: 100px;
-    top: 270px;
+    top: 550px;
     right: 20px;
     cursor: pointer;
     transition: all 0.2s linear;
@@ -47,7 +47,7 @@
 
     .redCircle {
         height: 90px;
-        top: 240px;
+        top: 390px;
         right: 18px;
     }
 
@@ -70,13 +70,13 @@
 
     .redCircle {
         height: 60px;
-        top: 200px;
+        top: 360px;
         right: 16px;
     }
 
     .violetCircle {
         height: 180px;
-        bottom: 60px;
+        bottom: 300px;
         left: 30px;
     }
 }
@@ -93,13 +93,13 @@
 
     .redCircle {
         height: 40px;
-        top: 220px;
+        top: 320px;
         right: 14px;
     }
 
     .violetCircle {
         height: 110px;
-        bottom: 90px;
+        bottom: 300px;
         left: 30px;
     }
 }

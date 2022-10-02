@@ -11,9 +11,10 @@
     0% {
         stroke-dashoffset: 520;
     }
-    35% {
+    30% {
         stroke-dashoffset: 0;
     }
+
     70% {
         stroke-dashoffset: 0;
     }
@@ -28,6 +29,6 @@
 }
 @media (max-width: 570px) {
     .heart {
-        width: 130px;
+        width: 110px;
     }
 }

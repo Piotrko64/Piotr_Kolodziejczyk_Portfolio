@@ -1,0 +1,22 @@
+.mainContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 1320px) {
+    .mainContent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 920px) {
+    .mainContent {
+        flex-direction: column;
+    }
+}

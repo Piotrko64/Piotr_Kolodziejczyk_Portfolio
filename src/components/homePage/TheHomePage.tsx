@@ -1,5 +1,6 @@
 import { PropsGithubApi } from "../../@types/api/GithubApiResponse";
 import { BackgroundCirclesMainComponent } from "./backgroundCircles/BackgroundCirclesMainComponent";
+import { Contact } from "./contact/Contact";
 import { Cooperation } from "./cooperation/Cooperation";
 import { GithubInviteMainComponent } from "./githubInvite/GithubInviteMainComponent";
 import { MainHomeComponent } from "./mainHomeComponents/MainHomeComponent";
@@ -16,9 +17,11 @@ export function TheHomePage({ dataGithub }: PropsGithubApi) {
                 <>
                     <SelectedProjectsMainComponent />
                     <GithubInviteMainComponent dataGithub={dataGithub} />
+
+                    <Cooperation />
                 </>
             </BackgroundCirclesMainComponent>
-            <Cooperation />
+            <Contact />
         </>
     );
 }

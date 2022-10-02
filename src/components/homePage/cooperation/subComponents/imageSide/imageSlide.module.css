@@ -19,6 +19,17 @@
 .equal {
     scale: 1.4;
 }
+
+@media (max-width: 1320px) {
+    .icon {
+        height: 120px;
+        width: 120px;
+    }
+    .container {
+        font-size: 3.7rem;
+    }
+}
+
 @media (max-width: 920px) {
     .icon {
         height: 100px;
