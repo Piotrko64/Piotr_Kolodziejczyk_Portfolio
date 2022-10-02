@@ -3,6 +3,8 @@
     padding: 15px;
     text-align: justify;
     background-color: var(--mainBackColor);
+    text-align-last: center;
+    line-height: 1.32;
 }
 .text::first-letter {
     font-size: 2em;
