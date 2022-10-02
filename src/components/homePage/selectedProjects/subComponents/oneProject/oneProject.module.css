@@ -1,8 +1,11 @@
 .slide {
     background-color: brown;
+    cursor: grab;
+    border-radius: 15px;
+    overflow: hidden;
 }
 .photo {
     height: 400px;
-    width: 400px;
+    width: 100%;
     position: relative;
 }

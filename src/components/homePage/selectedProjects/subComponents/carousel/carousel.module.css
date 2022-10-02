@@ -1,9 +1,8 @@
 .slide {
     background-color: rgb(68, 68, 68);
     margin: 0 auto;
-    min-width: none;
-    max-width: none;
 }
 .container {
     display: flex;
+    width: 100vw;
 }

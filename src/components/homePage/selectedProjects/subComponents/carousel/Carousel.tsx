@@ -12,15 +12,11 @@ export function Carousel({
 }) {
     const [sliderRef] = useKeenSlider({
         slides: {
-            perView: 2.5,
-            spacing: 15,
+            perView: 2.1,
+            spacing: 90,
             origin: "center",
         },
         loop: true,
-        range: {
-            min: -5,
-            max: 5,
-        },
     });
 
     return (

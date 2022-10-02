@@ -20,6 +20,7 @@ export function OneProject({
                     additionalClass={classes.photo}
                 />
                 <h3>{title}</h3>
+
                 <div>
                     {dataProject.technologies.map((tool) => (
                         <span>{tool}</span>

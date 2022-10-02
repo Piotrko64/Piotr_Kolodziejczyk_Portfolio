@@ -32,9 +32,9 @@ export function TheHomePage({
                     <GithubInviteMainComponent dataGithub={dataGithub} />
 
                     <Cooperation />
+                    <Contact />
                 </>
             </BackgroundCirclesMainComponent>
-            <Contact />
         </>
     );
 }

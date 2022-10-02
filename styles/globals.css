@@ -17,6 +17,7 @@ body {
     background-color: var(--mainBackColor);
     color: var(--mainFontColor);
     min-height: 2100px;
+    overflow-x: hidden;
 }
 
 .flexCenter {
