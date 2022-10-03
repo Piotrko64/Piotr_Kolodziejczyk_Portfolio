@@ -39,6 +39,11 @@ export function Contact() {
                     {contactLang.t("textIsCopy")}
                 </div>
             </button>
+            <NextImage
+                imgURL="/assets/logo.png"
+                additionalClass={classes.image}
+                modeContain
+            />
         </>
     );
 }

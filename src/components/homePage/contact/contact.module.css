@@ -41,8 +41,14 @@
 .wasCopy {
     right: 0;
 }
+.image {
+    height: 85px;
+    width: 90px;
+    margin: 80px auto 40px;
+}
 @media (max-width: 570px) {
     .buttonCopy {
         padding: 10px;
+        margin-bottom: 90px;
     }
 }

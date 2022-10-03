@@ -7,11 +7,13 @@ export function NextImage({
     additionalClass,
     click,
     title,
+    modeContain,
 }: {
     imgURL: string;
     additionalClass: string;
     click?: () => void;
     title?: string;
+    modeContain?: true;
 }) {
     return (
         <div onClick={click}>
@@ -20,7 +22,7 @@ export function NextImage({
                     src={imgURL}
                     alt={title}
                     layout="fill"
-                    objectFit="cover"
+                    objectFit={modeContain ? "contain" : "cover"}
                     sizes="50vw"
                     loading="eager"
                 />
