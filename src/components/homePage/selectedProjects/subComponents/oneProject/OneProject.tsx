@@ -46,7 +46,11 @@ export function OneProject({
                 </div>
                 <div className={classes.links}>
                     {dataProject.githubLink && (
-                        <a href={dataProject.githubLink} className={classes.a}>
+                        <a
+                            href={dataProject.githubLink}
+                            className={classes.a}
+                            target="_blank"
+                        >
                             <NextImage
                                 imgURL="/assets/icons/githubIcon.png"
                                 additionalClass={classes.icon}
@@ -54,7 +58,11 @@ export function OneProject({
                         </a>
                     )}
                     {dataProject.liveLink && (
-                        <a href={dataProject.githubLink} className={classes.a}>
+                        <a
+                            href={dataProject.githubLink}
+                            className={classes.a}
+                            target="_blank"
+                        >
                             <NextImage
                                 imgURL="/assets/icons/link.png"
                                 additionalClass={classes.icon}

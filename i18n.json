@@ -2,6 +2,6 @@
     "locales": ["en", "pl"],
     "defaultLocale": "pl",
     "pages": {
-        "/": ["home", "titles", "github", "coop"]
+        "/": ["home", "titles", "github", "coop", "contact"]
     }
 }
