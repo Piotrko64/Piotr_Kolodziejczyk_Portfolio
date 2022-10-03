@@ -14,5 +14,8 @@ export const projectsQuery = `{
     liveLink
     githubLink
    technologies
+    colorTheme {
+      hex
+    }
   }
 }`;

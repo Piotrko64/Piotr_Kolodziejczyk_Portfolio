@@ -41,6 +41,9 @@ export interface OneProjectInterface {
     liveLink?: any;
     githubLink: string;
     technologies: string[];
+    colorTheme: {
+        hex: string;
+    };
 }
 
 export interface ResponseProjectsData {

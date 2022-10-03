@@ -15,12 +15,10 @@ export function GithubInviteMainComponent({ dataGithub }: PropsGithubApi) {
             <div className={classes.container}>
                 <div className={classes.title}>
                     <div>
-                        <ScrollParallax strength={0.05}>
-                            <NextImage
-                                imgURL={"/assets/icons/githubIcon.png"}
-                                additionalClass={classes.image}
-                            />
-                        </ScrollParallax>
+                        <NextImage
+                            imgURL={"/assets/icons/githubIcon.png"}
+                            additionalClass={classes.image}
+                        />
                     </div>
                     <h2 className={classes.h2}>{t("visit")}</h2>
                     <div></div>

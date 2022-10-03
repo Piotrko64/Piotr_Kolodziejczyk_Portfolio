@@ -17,6 +17,20 @@ export function Carousel({
             origin: "center",
         },
         loop: true,
+        breakpoints: {
+            "(max-width: 1320px)": {
+                slides: { perView: 2, spacing: 40, origin: "center" },
+            },
+            "(max-width: 920px)": {
+                slides: { perView: 1.6, spacing: 30, origin: "center" },
+            },
+            "(max-width: 570px)": {
+                slides: { perView: 1.4, spacing: 20, origin: "center" },
+            },
+            "(max-width: 440px)": {
+                slides: { perView: 1.2, spacing: 10, origin: "center" },
+            },
+        },
     });
 
     return (
