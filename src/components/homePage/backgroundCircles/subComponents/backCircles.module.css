@@ -58,26 +58,7 @@
         opacity: 0.8;
     }
     .yellowCircle {
-        height: 32px;
-    }
-
-    .redCircle {
-        height: 60px;
-    }
-
-    .violetCircle {
-        height: 180px;
-    }
-}
-@media (max-width: 420px) {
-    .circle {
-        border-width: 3px;
-        opacity: 0.6;
-    }
-    .yellowCircle {
-        height: 18px;
-        top: 3%;
-        left: 8px;
+        display: none;
     }
 
     .redCircle {
@@ -85,8 +66,12 @@
     }
 
     .violetCircle {
-        height: 110px;
-        bottom: 27%;
-        left: 30px;
+        display: none;
+    }
+}
+@media (max-width: 420px) {
+    .circle {
+        border-width: 3px;
+        opacity: 0.6;
     }
 }
