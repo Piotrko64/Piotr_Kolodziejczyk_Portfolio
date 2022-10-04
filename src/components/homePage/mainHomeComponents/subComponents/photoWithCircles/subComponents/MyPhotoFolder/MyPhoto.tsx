@@ -6,8 +6,8 @@ import { dataToRenderCircle } from "./dataToRenderCircle";
 import classes from "./myPhoto.module.css";
 
 export function MyPhoto() {
-    const { changeBubbleColor, nightMode } = useSettings((state: any) => state);
-    const { BUBBLE_FOR_DARKMODE, BUBBLE_FOR_LIGHTMODE } = configCanvas;
+    const { changeBubbleColor } = useSettings((state) => state);
+    const { BUBBLE_COLOR } = configCanvas;
 
     return (
         <div className={classes.container}>
@@ -21,11 +21,7 @@ export function MyPhoto() {
             <NextImage
                 imgURL={"/assets/images/me.jpg"}
                 additionalClass={classes.size}
-                click={() =>
-                    changeBubbleColor(
-                        nightMode ? BUBBLE_FOR_DARKMODE : BUBBLE_FOR_LIGHTMODE
-                    )
-                }
+                click={() => changeBubbleColor(BUBBLE_COLOR)}
             />
         </div>
     );

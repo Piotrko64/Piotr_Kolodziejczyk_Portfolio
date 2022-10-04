@@ -8,9 +8,8 @@ import { randomNumber } from "../../utils/randomNumber";
 import { configCanvas } from "../../config/configCanvas";
 
 export function useInitCanvas() {
-    const nightMode = useSettings((state: any) => state.nightMode);
-    const { COLOR_DARK, COLOR_WHITE } = configCanvas;
-    const { bubbleColor } = useSettings((state: any) => state);
+    const { COLOR_DARK } = configCanvas;
+    const { bubbleColor } = useSettings((state) => state);
 
     function animateCanvas(canvasElement: HTMLCanvasElement) {
         const ctx = canvasElement.getContext("2d")!;
@@ -43,7 +42,7 @@ export function useInitCanvas() {
         }
 
         function animate() {
-            ctx.fillStyle = `${nightMode ? COLOR_DARK : COLOR_WHITE}`;
+            ctx.fillStyle = COLOR_DARK;
             ctx.fillRect(0, 0, canvasElement.width, canvasElement.height);
             handleShapes(arrayCircle);
             requestAnimationFrame(animate);

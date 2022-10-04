@@ -7,7 +7,7 @@ import { useSettings } from "../../store/settings";
 export function CanvasContainer({ children }: ChildrenProps) {
     const canvas = useRef<HTMLCanvasElement>(null);
     const { animateCanvas } = useInitCanvas();
-    const { bubbleColor } = useSettings((state: any) => state);
+    const { bubbleColor } = useSettings((state) => state);
 
     useEffect(() => {
         animateCanvas(canvas.current!);

@@ -4,7 +4,6 @@ import { BigTitle } from "../../../ui/bigTitle/BigTitle";
 import { NextImage } from "../../../ui/images/NextImage";
 import { useState } from "react";
 import cx from "classnames";
-import { MouseParallax } from "react-just-parallax";
 
 export function Contact() {
     const titlesLang = useTranslation("titles");

@@ -1,3 +1,5 @@
+import { RichTextContent } from "@graphcms/rich-text-types";
+
 export interface MainImage {
     url: string;
 }
@@ -12,7 +14,7 @@ export interface Child {
 }
 
 export interface Describe {
-    raw: any;
+    raw: RichTextContent;
 }
 
 export interface Child4 {
@@ -29,7 +31,7 @@ export interface Raw2 {
 }
 
 export interface DescribePl {
-    raw: any;
+    raw: RichTextContent;
 }
 
 export interface OneProjectInterface {
@@ -38,7 +40,7 @@ export interface OneProjectInterface {
     describePl: DescribePl;
     titlePl: string;
     title: string;
-    liveLink?: any;
+    liveLink?: string;
     githubLink: string;
     technologies: string[];
     colorTheme: {
