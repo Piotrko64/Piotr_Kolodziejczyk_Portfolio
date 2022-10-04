@@ -19,7 +19,7 @@
 .redCircle {
     border-color: var(--red);
     height: 100px;
-    top: 900px;
+    bottom: 50%;
     right: 90px;
     cursor: pointer;
     transition: all 0.2s linear;
