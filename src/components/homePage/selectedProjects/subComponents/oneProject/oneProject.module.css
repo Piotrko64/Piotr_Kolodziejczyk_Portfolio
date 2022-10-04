@@ -5,6 +5,8 @@
     overflow: hidden;
     border: 6px solid var(--yellow);
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 .photo {
     height: 400px;
@@ -52,6 +54,7 @@
     background-color: rgba(240, 248, 255, 0.2);
 }
 .links {
+    margin-top: auto;
     display: flex;
 }
 @media (max-width: 920px) {

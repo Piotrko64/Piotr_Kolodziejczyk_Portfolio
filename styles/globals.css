@@ -7,8 +7,21 @@
     --yellow: #de953f;
     --red: #c53232;
     --grey: #3d3d3d;
+    --scrollBarBack: #363541;
+}
+::-webkit-scrollbar {
+    width: 12px;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--scrollBarBack);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--red);
+}
 html,
 body {
     padding: 0;

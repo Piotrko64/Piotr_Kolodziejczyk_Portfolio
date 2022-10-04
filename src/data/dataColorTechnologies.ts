@@ -27,4 +27,16 @@ export const dataColorTechnologies = [
         name: "vitest",
         color: "#34853e",
     },
+    {
+        name: "vite",
+        color: "#a234dd",
+    },
+    {
+        name: "css modules",
+        color: "#1783b4",
+    },
+    {
+        name: "framer motion",
+        color: "#b133bf",
+    },
 ];
