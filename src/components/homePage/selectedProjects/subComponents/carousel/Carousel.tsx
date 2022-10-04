@@ -19,9 +19,6 @@ export function Carousel({
             {dataProjects.projectsID.map((project) => (
                 <OneProject key={project.title} dataProject={project} />
             ))}
-            {dataProjects.projectsID.map((project) => (
-                <OneProject key={project.title} dataProject={project} />
-            ))}
         </div>
     );
 }
