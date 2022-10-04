@@ -20,7 +20,9 @@ export function GithubInviteMainComponent({ dataGithub }: PropsGithubApi) {
                             additionalClass={classes.image}
                         />
                     </div>
-                    <h2 className={classes.h2}>{t("visit")}</h2>
+                    <h2 className={classes.h2}>
+                        <a href="https://github.com/Piotrko64">{t("visit")}</a>
+                    </h2>
                     <div></div>
                 </div>
                 <div className={classes.lineInfo}>

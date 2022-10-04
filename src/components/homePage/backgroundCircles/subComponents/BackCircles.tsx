@@ -10,7 +10,7 @@ export function BackCircles() {
             {dataBackgroundCircles.map(({ name, strenth }) => (
                 <ScrollParallax
                     strength={strenth}
-                    lerpEase={0.9}
+                    lerpEase={0.6}
                     key={name}
                     isAbsolutelyPositioned
                 >

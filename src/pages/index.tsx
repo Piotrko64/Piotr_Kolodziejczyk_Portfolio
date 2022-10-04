@@ -5,6 +5,8 @@ import { getProjectsData } from "../../graphql/SSG/getProjectsData";
 import { ResponseProjectsData } from "../@types/graphql/ResponseProjectsData";
 import { CanvasContainer } from "../components/canvas/CanvasContainer";
 import { TheHomePage } from "../components/homePage/TheHomePage";
+import { getCorrectLanguagePost } from "../../helpers/getCorrectLanguagePost";
+import { Language } from "../@types/Languages";
 
 const Home: NextPage = ({
     dataGithub,
@@ -33,7 +35,7 @@ const Home: NextPage = ({
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
     const octokit = new Octokit({
         auth: process.env.TOKENGITHUB,
     });
@@ -44,7 +46,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
     const { followers, public_repos } = dataGithub.data;
 
-    const dataProjects: ResponseProjectsData = await getProjectsData();
+    const dataResponseToProjectsSection: ResponseProjectsData =
+        await getProjectsData();
 
     return {
         props: {
@@ -52,7 +55,10 @@ export const getStaticProps: GetStaticProps = async () => {
                 followers,
                 publicRepos: public_repos,
             },
-            dataProjects,
+            dataProjects: getCorrectLanguagePost(
+                dataResponseToProjectsSection,
+                locale as Language
+            ),
         },
     };
 };
