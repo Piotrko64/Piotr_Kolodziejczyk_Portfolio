@@ -2,19 +2,21 @@ import Image from "next/image";
 import cx from "classnames";
 import classes from "./nextImage.module.css";
 
+type Props = {
+    imgURL: string;
+    additionalClass: string;
+    click?: () => void;
+    title?: string;
+    modeContain?: true;
+};
+
 export function NextImage({
     imgURL,
     additionalClass,
     click,
     title,
     modeContain,
-}: {
-    imgURL: string;
-    additionalClass: string;
-    click?: () => void;
-    title?: string;
-    modeContain?: true;
-}) {
+}: Props) {
     return (
         <div onClick={click}>
             <div className={cx(additionalClass, classes.relative)}>

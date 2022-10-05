@@ -11,13 +11,12 @@ import { MainHomeComponent } from "./mainHomeComponents/MainHomeComponent";
 import { SelectedProjectsMainComponent } from "./selectedProjects/SelectedProjectsMainComponent";
 import { SkillsBoardMainComponent } from "./skillsBoard/SkillsBoardMainComponent";
 
-export function TheHomePage({
-    dataGithub,
-    dataProjects,
-}: {
+type Props = {
     dataGithub: GithubApiResponse;
     dataProjects: ResponseProjectsData;
-}) {
+};
+
+export function TheHomePage({ dataGithub, dataProjects }: Props) {
     return (
         <>
             <MainHomeComponent />

@@ -6,11 +6,11 @@ import { NextImage } from "../../../../../ui/images/NextImage";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { colorBackgroundTechnolog } from "./helpers/colorBackgroundTechnolog";
 
-export function OneProject({
-    dataProject,
-}: {
+type Props = {
     dataProject: OneProjectInterface;
-}) {
+};
+
+export function OneProject({ dataProject }: Props) {
     const { title, mainImage, describe, colorTheme } = dataProject;
 
     return (

@@ -4,7 +4,9 @@ import { useBasicObserver } from "../../hooks/observerApi/useBasicObserver";
 
 const SPEED_ANIMATION = 220;
 
-export function AnimatedCounter({ endNumber }: { endNumber: number }) {
+type Props = { endNumber: number };
+
+export function AnimatedCounter({ endNumber }: Props) {
     const numberCounter = useRef(null);
     const isVisible = useBasicObserver(numberCounter);
     const [actualNumber, setActualNumber] = useState(0);

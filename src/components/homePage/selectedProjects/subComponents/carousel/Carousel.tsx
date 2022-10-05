@@ -4,11 +4,11 @@ import { ResponseProjectsData } from "../../../../../@types/graphql/ResponseProj
 import { OneProject } from "../oneProject/OneProject";
 import { keenSliderConfig } from "../../../../../config/keenSliderConfig";
 
-export function Carousel({
-    dataProjects,
-}: {
+type Props = {
     dataProjects: ResponseProjectsData;
-}) {
+};
+
+export function Carousel({ dataProjects }: Props) {
     const [sliderRef] = useKeenSlider(keenSliderConfig);
 
     return (
