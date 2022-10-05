@@ -49,7 +49,7 @@
 
 # About 
 
-NextJS projects that is my portfolio webiste
+NextJS project that is my portfolio website
 
 <br />
 
@@ -69,6 +69,12 @@ NextJS projects that is my portfolio webiste
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/194047076-e1fca1ed-1072-44d3-b6ed-a1b5414baf3c.png"/><p>
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/77500425/194047291-99954ebe-c5e3-4a39-97bd-2371657cb540.png"/><p>
+
+### To fetch data about my project I use HYGRAPH 
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/77500425/194047727-328ca6bc-9c2b-463d-a7fa-ab7451b3408d.png"/><p>
+
+
 
 <br />
 
