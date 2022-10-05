@@ -7,7 +7,6 @@ export function HeartSVG() {
             height="162"
             viewBox="0 0 165 162"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
             className={classes.heart}
         >
             <path

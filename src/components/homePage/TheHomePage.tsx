@@ -28,9 +28,7 @@ export function TheHomePage({
                     <SelectedProjectsMainComponent
                         dataProjects={dataProjects}
                     />
-
                     <GithubInviteMainComponent dataGithub={dataGithub} />
-
                     <Cooperation />
                     <Contact />
                 </>

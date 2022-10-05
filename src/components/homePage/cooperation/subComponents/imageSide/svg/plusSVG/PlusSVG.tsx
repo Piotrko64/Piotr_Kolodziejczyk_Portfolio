@@ -7,7 +7,6 @@ export function PlusSVG() {
             height="77"
             viewBox="0 0 77 77"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
             className={classes.width}
         >
             <path

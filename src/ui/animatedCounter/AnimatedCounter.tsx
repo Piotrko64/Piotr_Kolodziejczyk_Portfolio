@@ -2,11 +2,13 @@ import classes from "./animatedCounter.module.css";
 import { useEffect, useRef, useState } from "react";
 import { useBasicObserver } from "../../hooks/observerApi/useBasicObserver";
 
+const SPEED_ANIMATION = 220;
+
 export function AnimatedCounter({ endNumber }: { endNumber: number }) {
     const numberCounter = useRef(null);
     const isVisible = useBasicObserver(numberCounter);
     const [actualNumber, setActualNumber] = useState(0);
-    const [speedTimeout, setSpeedTimeout] = useState(220);
+    const [speedTimeout, setSpeedTimeout] = useState(SPEED_ANIMATION);
 
     let interval: NodeJS.Timeout;
 

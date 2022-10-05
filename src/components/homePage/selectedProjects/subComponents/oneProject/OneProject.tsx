@@ -29,6 +29,7 @@ export function OneProject({
                     <div className={classes.technologies}>
                         {dataProject.technologies.map((tool) => (
                             <span
+                                key={tool}
                                 className={classes.span}
                                 style={{
                                     backgroundColor:
