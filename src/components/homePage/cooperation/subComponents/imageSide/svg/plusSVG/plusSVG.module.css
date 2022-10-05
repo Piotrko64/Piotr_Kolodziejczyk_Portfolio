@@ -2,7 +2,7 @@
     stroke: var(--mainFontColor);
 }
 .width {
-    width: 120px;
+    width: 100px;
 }
 .heart {
     stroke-dasharray: 560;
@@ -29,12 +29,12 @@
 }
 @media (max-width: 920px) {
     .width {
-        width: 65px;
+        width: 55px;
     }
 }
 @media (max-width: 570px) {
     .width {
-        width: 60px;
+        width: 50px;
     }
 }
 @media (max-width: 570px) {

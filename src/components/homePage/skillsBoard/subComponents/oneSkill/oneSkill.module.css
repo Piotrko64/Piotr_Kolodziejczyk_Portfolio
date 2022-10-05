@@ -3,6 +3,9 @@
     aspect-ratio: 1;
     margin: 20px 40px;
 }
+.icon::selection {
+    background-color: transparent;
+}
 @media (max-width: 1320px) {
     .icon {
         height: 70px;

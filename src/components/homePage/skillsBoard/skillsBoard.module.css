@@ -1,6 +1,7 @@
 .marquee {
     margin-top: 100px;
 }
+
 @media (max-width: 980px) {
     .marquee {
         margin-top: 70px;

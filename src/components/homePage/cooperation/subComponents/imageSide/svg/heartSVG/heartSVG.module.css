@@ -1,7 +1,7 @@
 .heart {
     stroke-dasharray: 560;
     stroke-dashoffset: 500;
-    width: 150px;
+    width: 130px;
     animation: 4.5s ease-in forwards draw infinite reverse;
 }
 .path {

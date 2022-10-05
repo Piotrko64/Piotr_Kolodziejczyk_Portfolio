@@ -9,6 +9,7 @@
     --grey: #3d3d3d;
     --scrollBarBack: #363541;
 }
+
 ::-webkit-scrollbar {
     width: 12px;
 }
