@@ -1,12 +1,12 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import Head from "next/head";
 import { Octokit } from "octokit";
-import { getProjectsData } from "../../graphql/SSG/getProjectsData";
 import { ResponseProjectsData } from "../@types/graphql/ResponseProjectsData";
 import { CanvasContainer } from "../components/canvas/CanvasContainer";
 import { TheHomePage } from "../components/homePage/TheHomePage";
-import { getCorrectLanguagePost } from "../../helpers/getCorrectLanguagePost";
+import { getCorrectLanguagePost } from "../helpers/getCorrectLanguagePost";
 import { Language } from "../@types/Languages";
+import { getProjectsData } from "../graphql/SSG/getProjectsData";
 
 const Home: NextPage = ({
     dataGithub,
