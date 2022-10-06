@@ -60,7 +60,7 @@ export function OneProject({ dataProject }: Props) {
                     )}
                     {dataProject.liveLink && (
                         <a
-                            href={dataProject.githubLink}
+                            href={dataProject.liveLink}
                             className={classes.a}
                             target="_blank"
                         >
