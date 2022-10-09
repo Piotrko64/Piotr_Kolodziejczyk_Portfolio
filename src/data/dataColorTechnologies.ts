@@ -48,7 +48,7 @@ export const dataColorTechnologies = [
         color: "green",
     },
     {
-        name: "next",
+        name: "nextjs",
         color: "#0b0b0b",
     },
     {
