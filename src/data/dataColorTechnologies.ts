@@ -39,4 +39,20 @@ export const dataColorTechnologies = [
         name: "framer motion",
         color: "#b133bf",
     },
+    {
+        name: "youtube",
+        color: "red",
+    },
+    {
+        name: "puppeteer",
+        color: "green",
+    },
+    {
+        name: "next",
+        color: "#0b0b0b",
+    },
+    {
+        name: "scss",
+        color: "#cf2dcb",
+    },
 ];
