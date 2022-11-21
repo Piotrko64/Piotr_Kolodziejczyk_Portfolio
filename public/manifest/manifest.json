@@ -1,10 +1,10 @@
 {
     "name": "Piotr Kołodziejczyk",
-    "short_name": "PK",
+    "short_name": "Portfolio PK",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#8334bc",
-    "theme_color": "#8334bc",
+    "background_color": "#3d3d3d",
+    "theme_color": "#3d3d3d",
     "orientation": "portrait-primary",
     "icons": [
         {
