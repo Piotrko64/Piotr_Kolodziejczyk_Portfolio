@@ -15,10 +15,6 @@ const Home: NextPage = ({
     return (
         <div>
             <Head>
-                <link rel="manifest" href="/manifest.json" />
-
-                <meta name="theme-color" content="#90cdf4" />
-
                 <title>Piotr Kołodziejczyk | Portfolio</title>
                 <meta
                     name="description"
