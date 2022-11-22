@@ -5,6 +5,25 @@ export default function Document() {
         <Html>
             <Head>
                 <link rel="manifest" href="/manifest/manifest.json" />
+                <meta name="apple-mobile-web-app-capable" content="yes"></meta>
+                <meta
+                    name="apple-mobile-web-app-title"
+                    content="PK | Portfolio"
+                ></meta>
+                <meta
+                    name="apple-mobile-web-app-status-bar-style"
+                    content="black"
+                ></meta>
+                <link
+                    rel="apple-touch-icon"
+                    href="/assets/icons/manifest/icon48x48.png"
+                    sizes="48x48"
+                ></link>
+                <link
+                    rel="apple-touch-icon"
+                    href="/assets/icons/manifest/icon144x144.png"
+                    sizes="144x144"
+                ></link>
                 <link
                     href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
                     rel="stylesheet"
