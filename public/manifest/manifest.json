@@ -6,21 +6,27 @@
     "background_color": "#1d1c2d",
     "theme_color": "#1d1c2d",
     "orientation": "portrait-primary",
+
     "icons": [
         {
-            "src": "/assets/logo.png",
+            "src": "/assets/icons/manifest/icon48x48.png",
             "type": "image/png",
-            "sizes": "72x72"
+            "sizes": "48x48"
         },
         {
-            "src": "/assets/logo.png",
+            "src": "/assets/icons/manifest/icon96x96.png",
             "type": "image/png",
             "sizes": "96x96"
         },
         {
-            "src": "/assets/logo.png",
+            "src": "/assets/icons/manifest/icon256x256.png",
             "type": "image/png",
-            "sizes": "128x128"
+            "sizes": "256x256"
+        },
+        {
+            "src": "/assets/icons/manifest/icon512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
         }
     ]
 }
