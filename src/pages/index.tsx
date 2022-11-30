@@ -60,6 +60,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
                 locale as Language
             ),
         },
-        revalidate: 84_000,
+        revalidate: 12_000,
     };
 };
