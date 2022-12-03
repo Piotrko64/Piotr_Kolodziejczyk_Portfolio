@@ -32,7 +32,7 @@ export function OneProject({ dataProject }: Props) {
                                 key={tool}
                                 className={classes.span}
                                 style={{
-                                    backgroundColor:
+                                    background:
                                         colorBackgroundTechnolog(tool) ||
                                         "var(--grey)",
                                 }}

@@ -1,15 +1,15 @@
 export const dataColorTechnologies = [
     {
         name: "react",
-        color: "#094389",
+        color: "radial-gradient(circle, rgba(76,81,191,1) 15%, rgba(61,160,187,1) 100%, rgba(94,18,106,1) 100%, rgba(187,187,130,1) 100%)",
     },
     {
         name: "redux",
-        color: "#5e126a",
+        color: "linear-gradient(354deg, rgba(94,18,106,1) 32%, rgba(140,33,157,1) 82%, rgba(94,18,106,1) 100%, rgba(187,187,130,1) 100%)",
     },
     {
         name: "typescript",
-        color: "#375289",
+        color: "radial-gradient(circle, rgba(47,116,192,1) 0%, rgba(19,81,148,1) 100%, rgba(94,18,106,1) 100%, rgba(187,187,130,1) 100%)",
     },
     {
         name: "styled components",
@@ -20,16 +20,32 @@ export const dataColorTechnologies = [
         color: "#585858",
     },
     {
+        name: "jasmine",
+        color: "#863f7e",
+    },
+    {
         name: "html canvas",
         color: "#be7942",
     },
     {
+        name: "prisma",
+        color: "linear-gradient(180deg, rgba(76,81,191,1) 41%, rgba(139,147,225,1) 100%, rgba(94,18,106,1) 100%, rgba(187,187,130,1) 100%)",
+    },
+    {
         name: "vitest",
-        color: "#34853e",
+        color: "linear-gradient(180deg, rgba(114,155,27,1) 51%, rgba(252,199,43,1) 98%, rgba(114,155,27,1) 100%)",
     },
     {
         name: "vite",
-        color: "#a234dd",
+        color: "linear-gradient(25deg, rgba(166,80,254,1) 68%, rgba(95,170,255,1) 97%, rgba(252,199,43,1) 100%, rgba(187,187,130,1) 100%)",
+    },
+    {
+        name: "angular",
+        color: "red",
+    },
+    {
+        name: "nodejs",
+        color: "linear-gradient(25deg, rgba(68,182,58,1) 28%, rgba(43,157,40,1) 98%, rgba(252,199,43,1) 100%, rgba(187,187,130,1) 100%)",
     },
     {
         name: "css modules",
@@ -53,6 +69,6 @@ export const dataColorTechnologies = [
     },
     {
         name: "scss",
-        color: "#cf2dcb",
+        color: "radial-gradient(circle, rgba(175,67,163,1) 0%, rgba(221,49,201,1) 100%, rgba(94,18,106,1) 100%, rgba(187,187,130,1) 100%)",
     },
 ];
