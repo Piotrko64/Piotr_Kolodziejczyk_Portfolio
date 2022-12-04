@@ -1,29 +1,20 @@
 import classes from "./coopImage.module.css";
 import cx from "classnames";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getActivePathSvg } from "../../../../../../data/dataToDigitalClock";
 import { ArrayDate } from "../../../../../../@types/ArrayDate";
+import { getArrayTime } from "./helpers/getArrayTimes";
+import { useBasicObserver } from "../../../../../../hooks/observerApi/useBasicObserver";
 
 export function CooperationImage() {
     const [dateArray, setDateArray] = useState<ArrayDate>(["0", "1", "2", "7"]);
 
+    const svg = useRef(null);
+    const isVisible = useBasicObserver(svg);
+
     useEffect(() => {
         let interval = setInterval(() => {
-            const time = new Date();
-
-            const hours = time.getHours();
-            const minutes = time.getMinutes();
-
-            const hoursString =
-                hours < 10 ? "0" + hours.toString() : hours.toString();
-            const minutesString =
-                minutes < 10 ? "0" + minutes.toString() : minutes.toString();
-
-            const arrayTimes = (hoursString + minutesString).split("");
-
-            setDateArray(arrayTimes as ArrayDate);
-
-            console.log(arrayTimes);
+            setDateArray(getArrayTime());
         }, 1000);
 
         return () => {
@@ -34,6 +25,7 @@ export function CooperationImage() {
     return (
         <>
             <svg
+                ref={svg}
                 width="205"
                 height="142"
                 viewBox="0 0 205 142"
@@ -43,7 +35,10 @@ export function CooperationImage() {
             >
                 <g
                     clip-path="url(#clip0_1_64)"
-                    className={cx(classes.schedule, classes.active)}
+                    className={cx(
+                        classes.schedule,
+                        isVisible && classes.active
+                    )}
                 >
                     <line
                         x1="10.1163"
@@ -74,7 +69,10 @@ export function CooperationImage() {
                         stroke-width="1.14525"
                     />
                     <rect
-                        className={cx(classes.logo, classes.active)}
+                        className={cx(
+                            classes.logo,
+                            isVisible && classes.active
+                        )}
                         x="11.0708"
                         y="8.20764"
                         width="90.8566"
@@ -107,6 +105,7 @@ export function CooperationImage() {
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.21345"
+                        className={classes.circle}
                     />
                     <circle
                         cx="148.286"
@@ -115,6 +114,7 @@ export function CooperationImage() {
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.21345"
+                        className={classes.circle}
                     />
                     <path
                         d="M114.032 24L113.016 25.016L114.032 26.0319H124.726L125.742 25.016L124.726 24H114.032Z"
@@ -386,7 +386,7 @@ export function CooperationImage() {
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
                         className={cx(
-                            getActivePathSvg(3, 2, dateArray)
+                            getActivePathSvg(3, 3, dateArray)
                                 ? classes.active
                                 : "",
                             classes.path
@@ -397,30 +397,60 @@ export function CooperationImage() {
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(2, 3, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M172.274 36.7264L171.258 37.7424L172.274 38.7584H182.968L183.984 37.7424L182.968 36.7264H172.274Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(4, 3, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M172.274 49.4528L171.258 50.4688L172.274 51.4848H182.968L183.984 50.4688L182.968 49.4528H172.274Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(7, 3, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M185 49.4529L183.984 50.4689L182.968 49.4529V38.7584L183.984 37.7424L185 38.7584V49.4529Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(6, 3, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M172.274 49.4529L171.258 50.4689L170.242 49.4529V38.7584L171.258 37.7424L172.274 38.7584V49.4529Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(5, 3, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <rect
                         x="57.0717"
@@ -429,7 +459,10 @@ export function CooperationImage() {
                         height="9.92551"
                         rx="4.96276"
                         fill="white"
-                        className={cx(classes.firstLine, classes.active)}
+                        className={cx(
+                            classes.firstLine,
+                            isVisible && classes.active
+                        )}
                     />
                     <rect
                         x="11"
@@ -438,7 +471,10 @@ export function CooperationImage() {
                         height="9"
                         rx="4.5"
                         fill="white"
-                        className={cx(classes.line, classes.active)}
+                        className={cx(
+                            classes.line,
+                            isVisible && classes.active
+                        )}
                     />
                     <rect
                         x="11"
@@ -447,7 +483,10 @@ export function CooperationImage() {
                         height="9"
                         rx="4.5"
                         fill="white"
-                        className={cx(classes.lineSecond, classes.active)}
+                        className={cx(
+                            classes.lineSecond,
+                            isVisible && classes.active
+                        )}
                     />
                 </g>
                 <rect

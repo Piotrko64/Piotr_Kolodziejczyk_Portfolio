@@ -14,10 +14,13 @@
 .logo.active {
     animation: animLogo 6s 1s ease-in-out forwards;
 }
-.line,
-.lineSecond {
+.path {
+    stroke: var(--gray);
+    fill: rgba(167, 167, 167, 0.1);
 }
-
+.circle {
+    animation: circleAnim 2.2s 2s linear infinite;
+}
 .firstLine {
     opacity: 0;
 }
@@ -26,8 +29,27 @@
     animation: opacity 1s 4s ease-in-out forwards;
 }
 .path.active {
-    fill: blue;
+    fill: rgb(255, 255, 255);
 }
+
+@keyframes circleAnim {
+    0% {
+        opacity: 0;
+    }
+    28% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    98% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes opacity {
     0% {
         opacity: 0;
