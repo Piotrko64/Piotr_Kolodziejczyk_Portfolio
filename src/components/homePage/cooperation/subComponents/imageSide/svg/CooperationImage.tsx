@@ -1,4 +1,5 @@
 import classes from "./coopImage.module.css";
+import cx from "classnames";
 
 export function CooperationImage() {
     return (
@@ -9,8 +10,12 @@ export function CooperationImage() {
                 viewBox="0 0 205 142"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className={classes.svg}
             >
-                <g clip-path="url(#clip0_1_64)">
+                <g
+                    clip-path="url(#clip0_1_64)"
+                    className={cx(classes.schedule, classes.active)}
+                >
                     <line
                         x1="10.1163"
                         x2="10.1163"
@@ -40,6 +45,7 @@ export function CooperationImage() {
                         stroke-width="1.14525"
                     />
                     <rect
+                        className={cx(classes.logo, classes.active)}
                         x="11.0708"
                         y="8.20764"
                         width="90.8566"
@@ -256,6 +262,7 @@ export function CooperationImage() {
                         height="9.92551"
                         rx="4.96276"
                         fill="white"
+                        className={cx(classes.firstLine, classes.active)}
                     />
                     <rect
                         x="11"
@@ -264,6 +271,7 @@ export function CooperationImage() {
                         height="9"
                         rx="4.5"
                         fill="white"
+                        className={cx(classes.line, classes.active)}
                     />
                     <rect
                         x="11"
@@ -272,6 +280,7 @@ export function CooperationImage() {
                         height="9"
                         rx="4.5"
                         fill="white"
+                        className={cx(classes.lineSecond, classes.active)}
                     />
                 </g>
                 <rect

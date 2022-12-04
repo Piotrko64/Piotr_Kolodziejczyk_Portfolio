@@ -25,9 +25,10 @@ export function TheHomePage({ dataGithub, dataProjects }: Props) {
                     <SelectedProjectsMainComponent
                         dataProjects={dataProjects}
                     />
-                    <Cooperation />
-                    <GithubInviteMainComponent dataGithub={dataGithub} />
                     <About />
+
+                    <GithubInviteMainComponent dataGithub={dataGithub} />
+                    <Cooperation />
                     <Contact />
                 </>
             </BackgroundCirclesMainComponent>
