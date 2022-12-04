@@ -12,10 +12,10 @@ export const keenSliderConfig: KeenSliderOptions<{}, {}, KeenSliderHooks> = {
             slides: { perView: 2, spacing: 40, origin: "center" },
         },
         "(max-width: 920px)": {
-            slides: { perView: 1.6, spacing: 30, origin: "center" },
+            slides: { perView: 1.6, spacing: 25, origin: "center" },
         },
         "(max-width: 570px)": {
-            slides: { perView: 1.4, spacing: 20, origin: "center" },
+            slides: { perView: 1.4, spacing: 15, origin: "center" },
         },
         "(max-width: 440px)": {
             slides: { perView: 1.2, spacing: 10, origin: "center" },

@@ -5,73 +5,77 @@ import { OneProjectInterface } from "../../../../../@types/graphql/ResponseProje
 import { NextImage } from "../../../../../ui/images/NextImage";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { colorBackgroundTechnolog } from "./helpers/colorBackgroundTechnolog";
+import classNames from "classnames";
 
 type Props = {
     dataProject: OneProjectInterface;
+    color: string;
 };
 
-export function OneProject({ dataProject }: Props) {
-    const { title, mainImage, describe, colorTheme } = dataProject;
+export function OneProject({ dataProject, color }: Props) {
+    const { title, mainImage, describe } = dataProject;
 
     return (
         <div
-            className={cx("keen-slider__slide", classes.slide)}
-            style={{ borderColor: colorTheme.hex }}
+            className={cx(classes.container, "keen-slider__slide")}
+            style={{ background: color }}
         >
-            <>
-                <NextImage
-                    imgURL={mainImage.url}
-                    additionalClass={classes.photo}
-                />
-                <div className={classes.mainText}>
-                    <h3 className={classes.h3}>{title}</h3>
+            <div className={cx(classes.slide)}>
+                <>
+                    <NextImage
+                        imgURL={mainImage.url}
+                        additionalClass={classes.photo}
+                    />
+                    <div className={classes.mainText}>
+                        <h3 className={classes.h3}>{title}</h3>
 
-                    <div className={classes.technologies}>
-                        {dataProject.technologies.map((tool) => (
-                            <span
-                                key={tool}
-                                className={classes.span}
-                                style={{
-                                    background:
-                                        colorBackgroundTechnolog(tool) ||
-                                        "var(--grey)",
-                                }}
+                        <div className={classes.technologies}>
+                            {dataProject.technologies.map((tool) => (
+                                <span
+                                    key={tool}
+                                    className={classes.span}
+                                    style={{
+                                        background:
+                                            colorBackgroundTechnolog(tool) ||
+                                            "var(--grey)",
+                                    }}
+                                >
+                                    {tool}
+                                </span>
+                            ))}
+                        </div>
+                        <div>
+                            <RichText content={describe.raw} />
+                        </div>
+                    </div>
+                    <div className={classes.links}>
+                        {dataProject.githubLink && (
+                            <a
+                                href={dataProject.githubLink}
+                                className={classes.a}
+                                target="_blank"
                             >
-                                {tool}
-                            </span>
-                        ))}
+                                <NextImage
+                                    imgURL="/assets/icons/githubIcon.png"
+                                    additionalClass={classes.icon}
+                                />
+                            </a>
+                        )}
+                        {dataProject.liveLink && (
+                            <a
+                                href={dataProject.liveLink}
+                                className={classes.a}
+                                target="_blank"
+                            >
+                                <NextImage
+                                    imgURL="/assets/icons/link.png"
+                                    additionalClass={classes.icon}
+                                />
+                            </a>
+                        )}
                     </div>
-                    <div>
-                        <RichText content={describe.raw} />
-                    </div>
-                </div>
-                <div className={classes.links}>
-                    {dataProject.githubLink && (
-                        <a
-                            href={dataProject.githubLink}
-                            className={classes.a}
-                            target="_blank"
-                        >
-                            <NextImage
-                                imgURL="/assets/icons/githubIcon.png"
-                                additionalClass={classes.icon}
-                            />
-                        </a>
-                    )}
-                    {dataProject.liveLink && (
-                        <a
-                            href={dataProject.liveLink}
-                            className={classes.a}
-                            target="_blank"
-                        >
-                            <NextImage
-                                imgURL="/assets/icons/link.png"
-                                additionalClass={classes.icon}
-                            />
-                        </a>
-                    )}
-                </div>
-            </>
+                </>
+            </div>
         </div>
     );
 }
