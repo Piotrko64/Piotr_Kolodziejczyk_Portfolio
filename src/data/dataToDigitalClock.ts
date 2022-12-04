@@ -1,3 +1,5 @@
+import { ArrayDate } from "../@types/ArrayDate";
+
 export const dataToDigitalClock = [
     { number: 1, digitalParts: [3, 6] },
     { number: 2, digitalParts: [1, 3, 4, 5, 7] },
@@ -10,3 +12,15 @@ export const dataToDigitalClock = [
     { number: 9, digitalParts: [1, 2, 3, 4, 6, 7, 8] },
     { number: 0, digitalParts: [1, 2, 3, 5, 6, 7] },
 ];
+
+export function getActivePathSvg(
+    number: number,
+    part: 0 | 1 | 2 | 3,
+    arrayDate: ArrayDate
+) {
+    const correctNumber = arrayDate[part];
+    const findDigitalParts = dataToDigitalClock.find(
+        (data) => data.number.toString() === correctNumber
+    )?.digitalParts;
+    return findDigitalParts?.includes(number);
+}

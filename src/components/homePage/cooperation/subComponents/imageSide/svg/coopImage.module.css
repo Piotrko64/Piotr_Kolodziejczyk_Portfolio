@@ -22,16 +22,12 @@
     opacity: 0;
 }
 
-/* .line.active {
-    animation: animLine 2s 4s ease-in-out forwards;
-}
-.lineSecond.active {
-    animation: animLine 1.4s 5s ease-in-out forwards;
-} */
 .firstLine.active {
-    animation: opacity 1s 3s ease-in-out forwards;
+    animation: opacity 1s 4s ease-in-out forwards;
 }
-
+.path.active {
+    fill: blue;
+}
 @keyframes opacity {
     0% {
         opacity: 0;

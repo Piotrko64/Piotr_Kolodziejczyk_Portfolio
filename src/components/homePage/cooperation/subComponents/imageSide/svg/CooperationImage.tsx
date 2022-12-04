@@ -1,7 +1,36 @@
 import classes from "./coopImage.module.css";
 import cx from "classnames";
+import { useEffect, useState } from "react";
+import { getActivePathSvg } from "../../../../../../data/dataToDigitalClock";
+import { ArrayDate } from "../../../../../../@types/ArrayDate";
 
 export function CooperationImage() {
+    const [dateArray, setDateArray] = useState<ArrayDate>(["0", "1", "2", "7"]);
+
+    useEffect(() => {
+        let interval = setInterval(() => {
+            const time = new Date();
+
+            const hours = time.getHours();
+            const minutes = time.getMinutes();
+
+            const hoursString =
+                hours < 10 ? "0" + hours.toString() : hours.toString();
+            const minutesString =
+                minutes < 10 ? "0" + minutes.toString() : minutes.toString();
+
+            const arrayTimes = (hoursString + minutesString).split("");
+
+            setDateArray(arrayTimes as ArrayDate);
+
+            console.log(arrayTimes);
+        }, 1000);
+
+        return () => {
+            clearInterval(interval);
+        };
+    });
+
     return (
         <>
             <svg
@@ -92,138 +121,276 @@ export function CooperationImage() {
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(1, 0, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M126.758 36.7265L125.742 37.7424L124.726 36.7265V26.032L125.742 25.016L126.758 26.032V36.7265Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(3, 0, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M114.032 36.7265L113.016 37.7424L112 36.7265V26.032L113.016 25.016L114.032 26.032V36.7265Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(2, 0, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M114.032 36.7264L113.016 37.7424L114.032 38.7584H124.726L125.742 37.7424L124.726 36.7264H114.032Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(4, 0, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M114.032 49.4528L113.016 50.4688L114.032 51.4848H124.726L125.742 50.4688L124.726 49.4528H114.032Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(5, 0, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M126.758 49.4529L125.742 50.4689L124.726 49.4529V38.7584L125.742 37.7424L126.758 38.7584V49.4529Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(6, 0, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M114.032 49.4529L113.016 50.4689L112 49.4529V38.7584L113.016 37.7424L114.032 38.7584V49.4529Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(7, 0, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M130.065 24L129.049 25.016L130.065 26.0319H140.759L141.775 25.016L140.759 24H130.065Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(1, 1, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M142.791 36.7265L141.775 37.7424L140.759 36.7265V26.032L141.775 25.016L142.791 26.032V36.7265Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(3, 1, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M130.065 36.7265L129.049 37.7424L128.033 36.7265V26.032L129.049 25.016L130.065 26.032V36.7265Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(2, 1, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M130.065 36.7264L129.049 37.7424L130.065 38.7584H140.759L141.775 37.7424L140.759 36.7264H130.065Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(4, 1, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M130.065 49.4528L129.049 50.4688L130.065 51.4848H140.759L141.775 50.4688L140.759 49.4528H130.065Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(7, 1, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M142.791 49.4529L141.775 50.4689L140.759 49.4529V38.7584L141.775 37.7424L142.791 38.7584V49.4529Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(6, 1, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M130.065 49.4529L129.049 50.4689L128.033 49.4529V38.7584L129.049 37.7424L130.065 38.7584V49.4529Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(5, 1, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M156.241 24L155.225 25.016L156.241 26.0319H166.935L167.951 25.016L166.935 24H156.241Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(1, 2, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M168.967 36.7265L167.951 37.7424L166.935 36.7265V26.032L167.951 25.016L168.967 26.032V36.7265Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(3, 2, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M156.241 36.7265L155.225 37.7424L154.209 36.7265V26.032L155.225 25.016L156.241 26.032V36.7265Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(2, 2, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M156.241 36.7264L155.225 37.7424L156.241 38.7584H166.935L167.951 37.7424L166.935 36.7264H156.241Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(4, 2, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M156.241 49.4528L155.225 50.4688L156.241 51.4848H166.935L167.951 50.4688L166.935 49.4528H156.241Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(7, 2, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M168.967 49.4529L167.951 50.4689L166.935 49.4529V38.7584L167.951 37.7424L168.967 38.7584V49.4529Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(6, 2, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M156.241 49.4529L155.225 50.4689L154.209 49.4529V38.7584L155.225 37.7424L156.241 38.7584V49.4529Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(5, 2, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M172.274 24L171.258 25.016L172.274 26.0319H182.968L183.984 25.016L182.968 24H172.274Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(1, 3, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M185 36.7265L183.984 37.7424L182.968 36.7265V26.032L183.984 25.016L185 26.032V36.7265Z"
                         fill="white"
                         stroke="#F0F0F0"
                         stroke-width="0.4269"
+                        className={cx(
+                            getActivePathSvg(3, 2, dateArray)
+                                ? classes.active
+                                : "",
+                            classes.path
+                        )}
                     />
                     <path
                         d="M172.274 36.7265L171.258 37.7424L170.242 36.7265V26.032L171.258 25.016L172.274 26.032V36.7265Z"
