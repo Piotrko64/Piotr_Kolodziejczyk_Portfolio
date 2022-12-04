@@ -46,8 +46,15 @@ export interface OneProjectInterface {
     colorTheme: {
         hex: string;
     };
+    order: number;
 }
 
+export type ArrayProjects = OneProjectInterface[];
+
 export interface ResponseProjectsData {
-    projectsID: OneProjectInterface[];
+    projectsID: ArrayProjects;
+}
+
+export interface Order {
+    order: number;
 }

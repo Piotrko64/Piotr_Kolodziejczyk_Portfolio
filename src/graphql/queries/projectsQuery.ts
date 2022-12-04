@@ -17,5 +17,6 @@ export const projectsQuery = `{
     colorTheme {
       hex
     }
+    order
   }
 }`;

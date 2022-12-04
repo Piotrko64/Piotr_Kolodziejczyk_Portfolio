@@ -1,3 +1,4 @@
+import { ResponseProjectsData } from "./../../@types/graphql/ResponseProjectsData";
 import { gql, GraphQLClient } from "graphql-request";
 import { projectsQuery } from "../queries/projectsQuery";
 
@@ -12,6 +13,6 @@ export async function getProjectsData() {
         ${projectsQuery}
     `;
 
-    const dataProjects = await hygraph.request(QUERY);
-    return dataProjects;
+    const dataProjects: ResponseProjectsData = await hygraph.request(QUERY);
+    return dataProjects.projectsID;
 }

@@ -1,10 +1,10 @@
 import { DescribePostLanguage } from "../@types/Languages";
-import { ResponseProjectsData } from "../@types/graphql/ResponseProjectsData";
+import { ArrayProjects, Order } from "../@types/graphql/ResponseProjectsData";
 import { Language } from "../@types/Languages";
 import { dataCorrectPostDescribeLang } from "../data/dataCorrectPostDescribeLang";
 
 export function getCorrectLanguagePost(
-    responseQuery: ResponseProjectsData,
+    responseQuery: ArrayProjects,
     lang: Language
 ) {
     const nameDescribe: DescribePostLanguage =
@@ -13,9 +13,11 @@ export function getCorrectLanguagePost(
         )?.describeName || "describe";
 
     const correctLanguageResponseQuery = responseQuery;
-    correctLanguageResponseQuery.projectsID.forEach((post) => {
+    correctLanguageResponseQuery.forEach((post) => {
         post.describe = post[nameDescribe];
     });
 
-    return correctLanguageResponseQuery;
+    return correctLanguageResponseQuery.sort((first: Order, second: Order) =>
+        first.order < second.order ? -1 : 1
+    );
 }

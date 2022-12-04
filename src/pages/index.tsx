@@ -1,12 +1,12 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import Head from "next/head";
 import { Octokit } from "octokit";
-import { ResponseProjectsData } from "../@types/graphql/ResponseProjectsData";
 import { CanvasContainer } from "../components/canvas/CanvasContainer";
 import { TheHomePage } from "../components/homePage/TheHomePage";
 import { getCorrectLanguagePost } from "../helpers/getCorrectLanguagePost";
 import { Language } from "../@types/Languages";
 import { getProjectsData } from "../graphql/SSG/getProjectsData";
+import { revalidate } from "../config/revalidate";
 
 const Home: NextPage = ({
     dataGithub,
@@ -46,8 +46,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 
     const { followers, public_repos } = dataGithub.data;
 
-    const dataResponseToProjectsSection: ResponseProjectsData =
-        await getProjectsData();
+    const dataResponseToProjectsSection = await getProjectsData();
 
     return {
         props: {
@@ -55,11 +54,12 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
                 followers,
                 publicRepos: public_repos,
             },
+
             dataProjects: getCorrectLanguagePost(
                 dataResponseToProjectsSection,
                 locale as Language
             ),
         },
-        revalidate: 12_000,
+        revalidate,
     };
 };

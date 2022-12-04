@@ -2,7 +2,10 @@ import {
     GithubApiResponse,
     PropsGithubApi,
 } from "../../@types/api/GithubApiResponse";
-import { ResponseProjectsData } from "../../@types/graphql/ResponseProjectsData";
+import {
+    ArrayProjects,
+    ResponseProjectsData,
+} from "../../@types/graphql/ResponseProjectsData";
 import { BackgroundCirclesMainComponent } from "./backgroundCircles/BackgroundCirclesMainComponent";
 import { Contact } from "./contact/Contact";
 import { Cooperation } from "./cooperation/Cooperation";
@@ -13,7 +16,7 @@ import { SkillsBoardMainComponent } from "./skillsBoard/SkillsBoardMainComponent
 
 type Props = {
     dataGithub: GithubApiResponse;
-    dataProjects: ResponseProjectsData;
+    dataProjects: ArrayProjects;
 };
 
 export function TheHomePage({ dataGithub, dataProjects }: Props) {

@@ -1,11 +1,11 @@
 import useTranslation from "next-translate/useTranslation";
-import { ResponseProjectsData } from "../../../@types/graphql/ResponseProjectsData";
+import { ArrayProjects } from "../../../@types/graphql/ResponseProjectsData";
 import { BigTitle } from "../../../ui/bigTitle/BigTitle";
 import classes from "./selectedProjects.module.css";
 import { Carousel } from "./subComponents/carousel/Carousel";
 
 type Props = {
-    dataProjects: ResponseProjectsData;
+    dataProjects: ArrayProjects;
 };
 
 export function SelectedProjectsMainComponent({ dataProjects }: Props) {
