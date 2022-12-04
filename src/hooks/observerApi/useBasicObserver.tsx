@@ -1,7 +1,10 @@
 import { RefObject, useEffect, useState } from "react";
 import { basicObserverConfig } from "../../config/basicObserverConfig";
 
-export function useBasicObserver(htmlElement: RefObject<HTMLElement>) {
+export function useBasicObserver(
+    htmlElement: RefObject<HTMLElement>,
+    moreThanOnce?: boolean
+) {
     const [isActive, setIsActive] = useState(false);
 
     let wasUsing = false;
@@ -13,7 +16,7 @@ export function useBasicObserver(htmlElement: RefObject<HTMLElement>) {
             if (!wasUsing) {
                 setIsActive(entry.isIntersecting);
 
-                if (entry.isIntersecting) {
+                if (!moreThanOnce && entry.isIntersecting) {
                     wasUsing = true;
                 }
             }

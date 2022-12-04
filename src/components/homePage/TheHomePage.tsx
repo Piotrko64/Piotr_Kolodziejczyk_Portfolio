@@ -1,14 +1,8 @@
-import {
-    GithubApiResponse,
-    PropsGithubApi,
-} from "../../@types/api/GithubApiResponse";
-import {
-    ArrayProjects,
-    ResponseProjectsData,
-} from "../../@types/graphql/ResponseProjectsData";
+import { GithubApiResponse } from "../../@types/api/GithubApiResponse";
+import { ArrayProjects } from "../../@types/graphql/ResponseProjectsData";
+import { About } from "./about/About";
 import { BackgroundCirclesMainComponent } from "./backgroundCircles/BackgroundCirclesMainComponent";
 import { Contact } from "./contact/Contact";
-import { Cooperation } from "./cooperation/Cooperation";
 import { GithubInviteMainComponent } from "./githubInvite/GithubInviteMainComponent";
 import { MainHomeComponent } from "./mainHomeComponents/MainHomeComponent";
 import { SelectedProjectsMainComponent } from "./selectedProjects/SelectedProjectsMainComponent";
@@ -31,7 +25,7 @@ export function TheHomePage({ dataGithub, dataProjects }: Props) {
                         dataProjects={dataProjects}
                     />
                     <GithubInviteMainComponent dataGithub={dataGithub} />
-                    <Cooperation />
+                    <About />
                     <Contact />
                 </>
             </BackgroundCirclesMainComponent>

@@ -1,7 +1,7 @@
-import { HeartSVG } from "./svg/heartSVG/HeartSVG";
-import { PlusSVG } from "./svg/plusSVG/PlusSVG";
 import classes from "./imageSlide.module.css";
 import { NextImage } from "../../../../../ui/images/NextImage";
+import { PlusSVG } from "./svg/plusSVG/PlusSVG";
+import { HeartSVG } from "./svg/heartSVG/HeartSVG";
 
 export function ImageSide() {
     return (
