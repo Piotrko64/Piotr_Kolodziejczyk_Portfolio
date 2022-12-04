@@ -1,6 +1,6 @@
 .svg {
     width: 500px;
-    height: 500px;
+    height: 400px;
 }
 .schedule > line {
     opacity: 0;
@@ -107,5 +107,23 @@
     }
     100% {
         opacity: 0;
+    }
+}
+@media (max-width: 920px) {
+    .svg {
+        width: 400px;
+        height: 340px;
+    }
+}
+@media (max-width: 570px) {
+    .svg {
+        width: 320px;
+        height: 240px;
+    }
+}
+@media (max-width: 440px) {
+    .svg {
+        width: 280px;
+        height: 190px;
     }
 }

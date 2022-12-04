@@ -23,7 +23,7 @@
     }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1240px) {
     .mainContent {
         flex-direction: column;
     }
