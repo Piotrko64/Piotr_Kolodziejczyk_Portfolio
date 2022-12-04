@@ -7,13 +7,14 @@ import { getCorrectLanguagePost } from "../helpers/getCorrectLanguagePost";
 import { Language } from "../@types/Languages";
 import { getProjectsData } from "../graphql/SSG/getProjectsData";
 import { revalidate } from "../config/revalidate";
+import { ChangeLangPanel } from "../ui/changeLangPanel/ChangeLangePanel";
 
 const Home: NextPage = ({
     dataGithub,
     dataProjects,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
-        <div>
+        <>
             <Head>
                 <title>Piotr Kołodziejczyk | Portfolio</title>
                 <meta
@@ -29,7 +30,8 @@ const Home: NextPage = ({
                     dataProjects={dataProjects}
                 />
             </CanvasContainer>
-        </div>
+            <ChangeLangPanel />
+        </>
     );
 };
 
