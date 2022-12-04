@@ -3,6 +3,7 @@ import { ArrayProjects } from "../../@types/graphql/ResponseProjectsData";
 import { About } from "./about/About";
 import { BackgroundCirclesMainComponent } from "./backgroundCircles/BackgroundCirclesMainComponent";
 import { Contact } from "./contact/Contact";
+import { Cooperation } from "./cooperation/Cooperation";
 import { GithubInviteMainComponent } from "./githubInvite/GithubInviteMainComponent";
 import { MainHomeComponent } from "./mainHomeComponents/MainHomeComponent";
 import { SelectedProjectsMainComponent } from "./selectedProjects/SelectedProjectsMainComponent";
@@ -24,6 +25,7 @@ export function TheHomePage({ dataGithub, dataProjects }: Props) {
                     <SelectedProjectsMainComponent
                         dataProjects={dataProjects}
                     />
+                    <Cooperation />
                     <GithubInviteMainComponent dataGithub={dataGithub} />
                     <About />
                     <Contact />
