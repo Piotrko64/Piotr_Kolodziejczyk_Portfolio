@@ -1,4 +1,4 @@
-import classes from "./heartSVG.module.css";
+import classes from "./HeartSVG.module.css";
 
 export function HeartSVG() {
     return (

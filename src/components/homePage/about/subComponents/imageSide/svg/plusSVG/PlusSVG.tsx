@@ -1,4 +1,4 @@
-import classes from "./plusSVG.module.css";
+import classes from "./PlusSVG.module.css";
 
 export function PlusSVG() {
     return (

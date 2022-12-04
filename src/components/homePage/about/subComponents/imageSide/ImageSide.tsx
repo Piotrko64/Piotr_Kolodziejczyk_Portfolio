@@ -1,4 +1,4 @@
-import classes from "./imageSlide.module.css";
+import classes from "./ImageSlide.module.css";
 import { NextImage } from "../../../../../ui/images/NextImage";
 import { PlusSVG } from "./svg/plusSVG/PlusSVG";
 import { HeartSVG } from "./svg/heartSVG/HeartSVG";
