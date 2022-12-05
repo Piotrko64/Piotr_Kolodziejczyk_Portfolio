@@ -14,6 +14,7 @@ export default function Document() {
                     name="apple-mobile-web-app-status-bar-style"
                     content="black"
                 ></meta>
+                <meta name="theme-color" content="#1d1c2d" />
                 <link
                     rel="apple-touch-icon"
                     href="/assets/icons/manifest/icon48x48.png"
