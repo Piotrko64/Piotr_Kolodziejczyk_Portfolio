@@ -5,27 +5,35 @@ import cx from "classnames";
 import { useEffect, useState } from "react";
 
 export function ChangeLangPanel() {
-    const [marginTop, setMarginTop] = useState(0);
+    const [scrollTop, setScrollTop] = useState(0);
     const { lang } = useTranslation();
 
     function changeLanguage() {
-        setLanguage(lang === "pl" ? "en" : "pl");
+        setLanguage(returnSecondLang());
+    }
+
+    function returnSecondLang() {
+        return lang === "pl" ? "en" : "pl";
+    }
+
+    function changeScrollTop() {
+        setScrollTop(window.scrollY - window.innerHeight / 2);
     }
 
     useEffect(() => {
-        document.addEventListener("scroll", () => {
-            setMarginTop(window.scrollY - window.innerHeight / 2);
-        });
+        document.addEventListener("scroll", changeScrollTop);
 
-        return () => {};
+        return () => {
+            document.removeEventListener("scroll", changeScrollTop);
+        };
     }, []);
 
     return (
         <button
             onClick={changeLanguage}
-            className={cx(classes.langPanel, marginTop <= 0 && classes.active)}
+            className={cx(classes.langPanel, scrollTop <= 0 && classes.active)}
         >
-            lang {marginTop}
+            {returnSecondLang()}
         </button>
     );
 }
