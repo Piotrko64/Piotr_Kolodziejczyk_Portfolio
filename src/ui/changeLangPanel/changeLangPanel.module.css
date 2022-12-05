@@ -24,10 +24,7 @@
 }
 @media (max-width: 720px) {
     .langPanel {
-        height: 50px;
-
-        font-size: 0.8rem;
-
-        border: 2px solid var(--yellow);
+        bottom: 30px;
+        font-size: 0.95rem;
     }
 }
