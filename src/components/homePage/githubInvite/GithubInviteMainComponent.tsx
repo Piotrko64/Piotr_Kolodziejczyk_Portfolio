@@ -11,7 +11,7 @@ export function GithubInviteMainComponent({ dataGithub }: PropsGithubApi) {
     const { t } = useTranslation("github");
 
     return (
-        <div className={classes.back}>
+        <section className={classes.back}>
             <div className={classes.container}>
                 <div className={classes.title}>
                     <div>
@@ -38,6 +38,6 @@ export function GithubInviteMainComponent({ dataGithub }: PropsGithubApi) {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

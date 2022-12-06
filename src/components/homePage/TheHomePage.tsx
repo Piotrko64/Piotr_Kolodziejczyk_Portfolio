@@ -28,7 +28,7 @@ export function TheHomePage({ dataGithub, dataProjects }: Props) {
                     <About />
 
                     <GithubInviteMainComponent dataGithub={dataGithub} />
-                    {/* <Cooperation /> */}
+                    <Cooperation />
                     <Contact />
                 </>
             </BackgroundCirclesMainComponent>

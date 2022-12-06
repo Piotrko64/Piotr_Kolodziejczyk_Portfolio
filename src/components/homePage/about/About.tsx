@@ -9,10 +9,10 @@ export function About() {
     return (
         <>
             <BigTitle title={t("about")} />
-            <div className={classes.mainContent}>
+            <section className={classes.mainContent}>
                 <ImageSide />
                 <TextSide />
-            </div>
+            </section>
         </>
     );
 }

@@ -9,10 +9,10 @@ export function Cooperation() {
     return (
         <>
             <BigTitle title={t("coop")} />
-            <div className={classes.mainContent}>
+            <section className={classes.mainContent}>
                 <ImageSide />
                 <TextSide />
-            </div>
+            </section>
         </>
     );
 }
