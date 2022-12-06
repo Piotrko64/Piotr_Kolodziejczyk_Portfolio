@@ -41,11 +41,12 @@
     .linkButton {
         margin: 30px auto;
         padding: 10px;
+        font-size: 1.1rem;
     }
 }
 @media (max-width: 440px) {
     .linkButton {
         margin: 20px auto;
-        padding: 5px;
+        padding: 8px;
     }
 }
