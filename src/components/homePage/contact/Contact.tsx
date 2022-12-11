@@ -17,7 +17,7 @@ export function Contact() {
     }
 
     return (
-        <>
+        <div className="space">
             <BigTitle title={titlesLang.t("contact")} />
             <p className={classes.p}>{contactLang.t("contactText")}</p>
 
@@ -43,6 +43,6 @@ export function Contact() {
                 additionalClass={classes.image}
                 modeContain
             />
-        </>
+        </div>
     );
 }

@@ -52,6 +52,10 @@ body {
     color: var(--red);
 }
 
+.space {
+    padding-top: 20px;
+}
+
 .boldYellow {
     font-weight: 900;
     color: var(--yellow);
@@ -86,14 +90,23 @@ section a:active {
     body {
         font-size: 20px;
     }
+    .space {
+        padding-top: 15px;
+    }
 }
 @media (max-width: 760px) {
     html,
     body {
         font-size: 19px;
     }
+    .space {
+        padding-top: 10px;
+    }
 }
 @media (max-width: 580px) {
+    .space {
+        padding-top: 8px;
+    }
 }
 @media (max-width: 420px) {
     html,

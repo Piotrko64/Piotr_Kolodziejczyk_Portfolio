@@ -11,7 +11,7 @@ export function GithubInviteMainComponent({ dataGithub }: PropsGithubApi) {
     const { t } = useTranslation("github");
 
     return (
-        <section className={classes.back}>
+        <section className={cx(classes.back, "space")}>
             <div className={classes.container}>
                 <div className={classes.title}>
                     <div>

@@ -7,12 +7,12 @@ import classes from "./about.module.css";
 export function About() {
     const { t } = useTranslation("titles");
     return (
-        <>
+        <div className="space">
             <BigTitle title={t("about")} />
             <section className={classes.mainContent}>
                 <ImageSide />
                 <TextSide />
             </section>
-        </>
+        </div>
     );
 }

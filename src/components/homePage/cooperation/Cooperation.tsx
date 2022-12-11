@@ -7,12 +7,12 @@ import { TextSide } from "./subComponents/textSide/TextSide";
 export function Cooperation() {
     const { t } = useTranslation("titles");
     return (
-        <>
+        <div className="space">
             <BigTitle title={t("coop")} />
             <section className={classes.mainContent}>
                 <ImageSide />
                 <TextSide />
             </section>
-        </>
+        </div>
     );
 }

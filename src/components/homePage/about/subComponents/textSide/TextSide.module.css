@@ -11,6 +11,9 @@
     font-weight: 600;
     color: var(--yellow);
 }
+.text::first-line {
+    line-height: 1.2;
+}
 .next {
     color: var(--red);
     font-size: 1.1em;
