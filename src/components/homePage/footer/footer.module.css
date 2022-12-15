@@ -1,0 +1,9 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.imageLogo {
+    height: 85px;
+    width: 90px;
+    margin: 80px auto 40px;
+}

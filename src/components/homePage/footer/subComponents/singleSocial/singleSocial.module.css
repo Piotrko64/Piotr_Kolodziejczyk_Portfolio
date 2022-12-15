@@ -1,0 +1,16 @@
+.anchorSocial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 220px;
+    transition: all 0.2s ease-in-out;
+    padding: 10px;
+}
+.anchorSocial:hover {
+    background-color: var(--grey);
+}
+.image {
+    height: 80px;
+    aspect-ratio: 1;
+}
