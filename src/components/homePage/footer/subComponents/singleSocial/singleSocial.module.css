@@ -11,6 +11,24 @@
     background-color: var(--grey);
 }
 .image {
-    height: 80px;
+    height: 70px;
     aspect-ratio: 1;
+}
+@media (max-width: 720px) {
+    .image {
+        height: 60px;
+        aspect-ratio: 1;
+    }
+}
+@media (max-width: 540px) {
+    .image {
+        height: 50px;
+        aspect-ratio: 1;
+    }
+}
+@media (max-width: 440px) {
+    .image {
+        height: 45px;
+        aspect-ratio: 1;
+    }
 }

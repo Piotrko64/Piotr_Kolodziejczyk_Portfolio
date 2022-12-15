@@ -9,7 +9,7 @@
 .yellowCircle {
     border-color: var(--yellow);
     height: 50px;
-    top: 240px;
+    top: 290px;
     left: -15px;
     border-width: 6px;
     cursor: pointer;
@@ -28,7 +28,7 @@
 .violetCircle {
     border-color: var(--violet);
     height: 240px;
-    bottom: 20%;
+    bottom: 25%;
     left: 50px;
     transition: all 0.2s linear;
     cursor: pointer;
