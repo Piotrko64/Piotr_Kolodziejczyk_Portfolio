@@ -8,6 +8,10 @@ export const dataColorTechnologies = [
         color: "linear-gradient(354deg, rgba(94,18,106,1) 32%, rgba(140,33,157,1) 82%, rgba(94,18,106,1) 100%, rgba(187,187,130,1) 100%)",
     },
     {
+        name: "vue",
+        color: "#43d295",
+    },
+    {
         name: "typescript",
         color: "radial-gradient(circle, rgba(47,116,192,1) 0%, rgba(19,81,148,1) 100%, rgba(94,18,106,1) 100%, rgba(187,187,130,1) 100%)",
     },
@@ -38,6 +42,21 @@ export const dataColorTechnologies = [
     {
         name: "vite",
         color: "linear-gradient(25deg, rgba(166,80,254,1) 68%, rgba(95,170,255,1) 97%, rgba(252,199,43,1) 100%, rgba(187,187,130,1) 100%)",
+    },
+    {
+        name: "pinia",
+        color: "#ffe369ad",
+        border: "#ffe369",
+    },
+    {
+        name: "PWA",
+
+        border: "#318298",
+    },
+    {
+        name: "cypress",
+        color: "#1c1a24",
+        border: "white",
     },
     {
         name: "angular",

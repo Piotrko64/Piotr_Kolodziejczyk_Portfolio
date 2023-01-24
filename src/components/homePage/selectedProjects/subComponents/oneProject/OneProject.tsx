@@ -6,6 +6,7 @@ import { NextImage } from "../../../../../ui/images/NextImage";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { colorBackgroundTechnolog } from "./helpers/colorBackgroundTechnolog";
 import classNames from "classnames";
+import { colorBorderTech } from "./helpers/colorBorderTech";
 
 type Props = {
     dataProject: OneProjectInterface;
@@ -38,6 +39,7 @@ export function OneProject({ dataProject, color }: Props) {
                                         background:
                                             colorBackgroundTechnolog(tool) ||
                                             "var(--grey)",
+                                        border: colorBorderTech(tool),
                                     }}
                                 >
                                     {tool}

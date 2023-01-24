@@ -1,7 +1,10 @@
 .container {
     padding: 4px;
-
+    cursor: grab;
     border-radius: 15px;
+}
+.container:active {
+    cursor: grabbing;
 }
 .slide {
     background-color: rgba(0, 0, 0, 0.85);

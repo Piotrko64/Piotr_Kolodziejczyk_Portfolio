@@ -3,7 +3,7 @@ import { KeenSliderHooks, KeenSliderOptions } from "keen-slider/react";
 export const keenSliderConfig: KeenSliderOptions<{}, {}, KeenSliderHooks> = {
     slides: {
         perView: 2.1,
-        spacing: 90,
+        spacing: 110,
         origin: "center",
     },
     loop: true,
