@@ -25,7 +25,7 @@
 }
 .mainText {
     padding: 20px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     text-align: justify;
     padding-top: 0;
 }
@@ -38,10 +38,10 @@
 .span {
     font-size: 0.8rem;
     background-color: var(--grey);
-    margin-right: 5px;
-    padding: 2px 10px;
-    margin-bottom: 5px;
-    border-radius: 4px;
+    margin-right: 9px;
+    padding: 4px 10px;
+    margin-bottom: 9px;
+    border-radius: 5px;
 }
 .technologies {
     display: flex;
@@ -88,14 +88,20 @@
     }
     .span {
         font-size: 0.85rem;
+        margin-right: 7px;
 
-        padding: 2px 8px;
+        margin-bottom: 7px;
+        border-radius: 4px;
+        padding: 3px 8px;
     }
     .technologies {
         margin-bottom: 8px;
     }
     .icon {
         height: 40px;
+    }
+    .mainText {
+        font-size: 0.95rem;
     }
 }
 @media (max-width: 570px) {
@@ -107,6 +113,13 @@
     }
     .icon {
         height: 35px;
+    }
+    .span {
+        margin-right: 5px;
+
+        margin-bottom: 5px;
+
+        padding: 3px 7px;
     }
 }
 @media (max-width: 440px) {

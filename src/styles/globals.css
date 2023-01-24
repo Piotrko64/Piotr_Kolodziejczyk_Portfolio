@@ -76,7 +76,7 @@ p {
 section a {
     text-decoration: underline;
 }
-section a:active {
+section a:is(:active, :hover) {
     text-decoration: none;
 }
 @media (max-width: 1320px) {

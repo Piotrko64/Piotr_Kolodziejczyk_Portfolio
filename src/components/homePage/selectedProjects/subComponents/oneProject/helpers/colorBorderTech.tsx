@@ -3,7 +3,5 @@ export function colorBorderTech(name: string) {
     const colorBackground = dataColorTechnologies.find((tech) =>
         name.toLowerCase().includes(tech.name.toLowerCase())
     );
-    return colorBackground?.border
-        ? `2px solid ${colorBackground?.border}`
-        : "none";
+    return `1.7px solid ${colorBackground?.border || "black"}`;
 }

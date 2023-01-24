@@ -55,7 +55,7 @@ export const dataColorTechnologies = [
     },
     {
         name: "cypress",
-        color: "#1c1a24",
+        color: "#3f3d48",
         border: "white",
     },
     {
@@ -85,9 +85,14 @@ export const dataColorTechnologies = [
     {
         name: "nextjs",
         color: "#0b0b0b",
+        border: "white",
     },
     {
         name: "scss",
         color: "radial-gradient(circle, rgba(175,67,163,1) 0%, rgba(221,49,201,1) 100%, rgba(94,18,106,1) 100%, rgba(187,187,130,1) 100%)",
+    },
+    {
+        name: "hygraph",
+        color: "radial-gradient(circle, rgba(185,67,150,1) 0%, rgba(181,39,181,1) 100%, rgba(74,18,111,1) 100%, rgba(167,187,140,1) 100%)",
     },
 ];
