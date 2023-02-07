@@ -47,7 +47,7 @@
     text-align: center;
     margin: 26px 0;
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 600;
 }
 .span {
     font-size: 0.75rem;
@@ -110,7 +110,8 @@
         font-size: 1rem;
     }
     .h3 {
-        margin: 8px 0;
+        margin: 12px 0;
+        font-size: 1.7rem;
     }
     .span {
         font-size: 0.8rem;
