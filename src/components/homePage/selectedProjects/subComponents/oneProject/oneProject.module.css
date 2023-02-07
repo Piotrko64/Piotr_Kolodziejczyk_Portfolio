@@ -36,7 +36,7 @@
 .mainText {
     padding: 30px;
     font-size: 0.85rem;
-    text-align: justify;
+    text-align: left;
     padding-top: 0;
     height: 100%;
     display: flex;
@@ -74,19 +74,20 @@
 }
 .a {
     transition: all 0.2s ease-in-out;
-    margin: auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     background-color: rgba(240, 248, 255, 0.2);
-
+    margin: 0 auto;
     padding: 10px;
     display: flex;
     justify-content: space-around;
     text-decoration: none;
     font-size: 0.75rem;
     gap: 10px;
+    align-self: center;
 }
 .a:hover {
     background-color: var(--violet);
@@ -112,12 +113,11 @@
     }
     .h3 {
         margin: 8px 0;
-        font-size: 1.4rem;
     }
     .span {
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin-right: 7px;
-        min-width: 110px;
+        min-width: auto;
         margin-bottom: 7px;
         border-radius: 4px;
         padding: 6px 14px;
@@ -126,7 +126,7 @@
         margin: 16px auto;
     }
     .icon {
-        height: 40px;
+        height: 32px;
     }
     .mainText {
         font-size: 0.95rem;
@@ -150,15 +150,18 @@
 
         margin-bottom: 5px;
 
-        padding: 8px 11px;
+        padding: 6px 11px;
     }
     .a {
         font-size: 1rem;
     }
+    .links {
+        padding-bottom: 15px;
+    }
 }
 @media (max-width: 440px) {
     .mainText {
-        padding: 5px;
+        padding: 10px;
     }
     .photo {
         height: 160px;

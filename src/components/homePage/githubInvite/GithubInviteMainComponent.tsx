@@ -16,7 +16,7 @@ export function GithubInviteMainComponent({ dataGithub }: PropsGithubApi) {
                 <div className={classes.title}>
                     <div>
                         <NextImage
-                            imgURL={"/assets/icons/githubIcon.png"}
+                            imgURL={"/assets/socialMedia/github.png"}
                             additionalClass={classes.image}
                         />
                     </div>
