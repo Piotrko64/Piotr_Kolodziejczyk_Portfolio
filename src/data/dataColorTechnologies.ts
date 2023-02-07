@@ -9,7 +9,7 @@ export const dataColorTechnologies = [
     },
     {
         name: "vue",
-        color: "#43d295",
+        color: "#1da76c",
     },
     {
         name: "typescript",

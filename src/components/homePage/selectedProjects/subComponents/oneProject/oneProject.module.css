@@ -1,22 +1,32 @@
-.container {
+/* .container {
     padding: 4px;
-    cursor: grab;
+
     border-radius: 15px;
 }
 .container:active {
     cursor: grabbing;
-}
+} */
 .slide {
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: #29273f;
+    cursor: grab;
+    border-radius: 8px;
 
-    border-radius: 15px;
-    overflow: hidden;
-    border: 0px solid var(--yellow);
     color: white;
     display: flex;
     flex-direction: column;
-
+    position: relative;
     height: 100%;
+}
+.borderTop {
+    width: 100%;
+    border-radius: 8px;
+    position: absolute;
+    height: 8px;
+    top: -5px;
+    left: 0;
+}
+.slide:active {
+    cursor: grabbing;
 }
 .photo {
     height: 400px;
@@ -24,54 +34,72 @@
     position: relative;
 }
 .mainText {
-    padding: 20px;
-    font-size: 0.9rem;
+    padding: 30px;
+    font-size: 0.85rem;
     text-align: justify;
     padding-top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .h3 {
     margin: 0;
     text-align: center;
-    margin: 22px 0;
+    margin: 26px 0;
     font-size: 1.6rem;
+    font-weight: 400;
 }
 .span {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     background-color: var(--grey);
     margin-right: 9px;
-    padding: 4px 10px;
+    padding: 8px 16px;
     margin-bottom: 9px;
     border-radius: 5px;
+    min-width: 150px;
+    text-align: center;
+    font-weight: 400;
 }
 .technologies {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     justify-content: center;
 }
 .icon {
-    height: 45px;
+    height: 35px;
     aspect-ratio: 1;
-    margin: 5px;
 }
 .a {
     transition: all 0.2s ease-in-out;
-    flex: 1;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
+    background-color: rgba(240, 248, 255, 0.2);
+
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    font-size: 0.75rem;
+    gap: 10px;
 }
 .a:hover {
-    background-color: rgba(240, 248, 255, 0.2);
+    background-color: var(--violet);
 }
 .links {
     margin-top: auto;
+    padding-top: 40px;
     display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 @media (max-width: 920px) {
-    .container {
-        border-radius: 10px;
-    }
     .slide {
         border-radius: 10px;
     }
@@ -79,7 +107,7 @@
         height: 260px;
     }
     .mainText {
-        padding: 5px;
+        padding: 15px;
         font-size: 1rem;
     }
     .h3 {
@@ -87,15 +115,15 @@
         font-size: 1.4rem;
     }
     .span {
-        font-size: 0.85rem;
+        font-size: 1rem;
         margin-right: 7px;
-
+        min-width: 110px;
         margin-bottom: 7px;
         border-radius: 4px;
-        padding: 3px 8px;
+        padding: 6px 14px;
     }
     .technologies {
-        margin-bottom: 8px;
+        margin: 16px auto;
     }
     .icon {
         height: 40px;
@@ -103,30 +131,39 @@
     .mainText {
         font-size: 0.95rem;
     }
+    .a {
+        font-size: 1rem;
+    }
 }
 @media (max-width: 570px) {
-    .container {
-        padding: 3px;
+    .mainText {
+        padding: 10px;
     }
     .photo {
         height: 210px;
     }
     .icon {
-        height: 35px;
+        height: 28px;
     }
     .span {
         margin-right: 5px;
 
         margin-bottom: 5px;
 
-        padding: 3px 7px;
+        padding: 8px 11px;
+    }
+    .a {
+        font-size: 1rem;
     }
 }
 @media (max-width: 440px) {
+    .mainText {
+        padding: 5px;
+    }
     .photo {
         height: 160px;
     }
     .icon {
-        height: 32px;
+        height: 26px;
     }
 }
