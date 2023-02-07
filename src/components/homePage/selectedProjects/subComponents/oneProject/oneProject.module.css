@@ -155,7 +155,8 @@
         font-size: 1rem;
     }
     .links {
-        padding-bottom: 15px;
+        padding-top: 30px;
+        padding-bottom: 10px;
     }
 }
 @media (max-width: 440px) {
