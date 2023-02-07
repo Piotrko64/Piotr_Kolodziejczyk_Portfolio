@@ -6,8 +6,8 @@ export function ShortDescribe() {
     return (
         <p className={classes.describe}>
             {t("myPassion")}
-            <span className="boldViolet"> {t("createPage")} </span> {t("and")}
-            <span className="boldRed"> {t("apps")} </span>
+            <span className=""> {t("createPage")} </span> {t("and")}
+            <span className=""> {t("apps")} </span>
         </p>
     );
 }

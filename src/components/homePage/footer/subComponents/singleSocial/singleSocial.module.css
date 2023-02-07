@@ -12,7 +12,7 @@
 }
 
 .image {
-    height: 70px;
+    height: 60px;
     aspect-ratio: 1;
 }
 @media (max-width: 720px) {

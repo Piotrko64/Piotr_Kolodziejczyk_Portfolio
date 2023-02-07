@@ -1,11 +1,9 @@
-/* .container {
-    padding: 4px;
+.container {
+    padding: 6px 0;
 
-    border-radius: 15px;
+    border-radius: 6px;
 }
-.container:active {
-    cursor: grabbing;
-} */
+
 .slide {
     background-color: #29273f;
     cursor: grab;
@@ -150,7 +148,8 @@
 
         margin-bottom: 5px;
 
-        padding: 6px 11px;
+        font-size: 0.85rem;
+        padding: 5px 10px;
     }
     .a {
         font-size: 1rem;

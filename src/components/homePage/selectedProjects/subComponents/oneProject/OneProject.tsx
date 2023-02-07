@@ -19,12 +19,11 @@ export function OneProject({ dataProject, color }: Props) {
     const { t } = useTranslation("projects");
 
     return (
-        <div className={cx(classes.container, "keen-slider__slide")}>
+        <div
+            className={cx(classes.container, "keen-slider__slide")}
+            style={{ background: color }}
+        >
             <div className={cx(classes.slide)}>
-                <div
-                    className={classes.borderTop}
-                    style={{ background: color }}
-                ></div>
                 <>
                     <NextImage
                         imgURL={mainImage.url}
