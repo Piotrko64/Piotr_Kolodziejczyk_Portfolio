@@ -1,5 +1,5 @@
 .container {
-    padding: 6px 0;
+    padding: 6px 0px;
 
     border-radius: 6px;
 }
@@ -34,7 +34,7 @@
 .mainText {
     padding: 30px;
     font-size: 0.85rem;
-    text-align: left;
+    text-align: justify;
     padding-top: 0;
     height: 100%;
     display: flex;
@@ -138,7 +138,7 @@
         padding: 10px;
     }
     .photo {
-        height: 210px;
+        height: 230px;
     }
     .icon {
         height: 28px;
@@ -148,7 +148,7 @@
 
         margin-bottom: 5px;
 
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         padding: 5px 10px;
     }
     .a {
@@ -163,7 +163,7 @@
         padding: 10px;
     }
     .photo {
-        height: 160px;
+        height: 185px;
     }
     .icon {
         height: 26px;
