@@ -1,7 +1,20 @@
 export const dataColorTechnologies = [
     {
+        name: "react query",
+
+        color: "#cd0404",
+    },
+    {
         name: "react",
         color: "radial-gradient(circle, rgba(76,81,191,1) 15%, rgba(61,160,187,1) 100%, rgba(94,18,106,1) 100%, rgba(187,187,130,1) 100%)",
+    },
+    {
+        name: "i18n",
+        border: "white",
+    },
+    {
+        name: "scss",
+        color: "radial-gradient(circle, rgba(175,67,163,1) 0%, rgba(221,49,201,1) 100%, rgba(94,18,106,1) 100%, rgba(187,187,130,1) 100%)",
     },
     {
         name: "redux",
@@ -18,6 +31,10 @@ export const dataColorTechnologies = [
     {
         name: "styled components",
         color: "#a57e24",
+    },
+    {
+        name: "firebase",
+        color: "#d47900",
     },
     {
         name: "zustand",
@@ -54,6 +71,11 @@ export const dataColorTechnologies = [
         border: "#318298",
     },
     {
+        name: "react query",
+
+        border: "radiar-gradient(circle, rgb(143 1 1) 35%, #f71f56 100%)",
+    },
+    {
         name: "cypress",
         color: "#3f3d48",
         border: "white",
@@ -87,10 +109,7 @@ export const dataColorTechnologies = [
         color: "#0b0b0b",
         border: "white",
     },
-    {
-        name: "scss",
-        color: "radial-gradient(circle, rgba(175,67,163,1) 0%, rgba(221,49,201,1) 100%, rgba(94,18,106,1) 100%, rgba(187,187,130,1) 100%)",
-    },
+
     {
         name: "hygraph",
         color: "radial-gradient(circle, rgba(185,67,150,1) 0%, rgba(181,39,181,1) 100%, rgba(74,18,111,1) 100%, rgba(167,187,140,1) 100%)",
