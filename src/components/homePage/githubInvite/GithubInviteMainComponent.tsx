@@ -21,9 +21,15 @@ export function GithubInviteMainComponent({ dataGithub }: PropsGithubApi) {
                         />
                     </div>
                     <h2 className={classes.h2}>
-                        <a href="https://github.com/Piotrko64">{t("visit")}</a>
+                        <a
+                            href="https://github.com/Piotrko64"
+                            target={"_blank"}
+                            rel="noopener"
+                        >
+                            {t("visit")}
+                        </a>
                     </h2>
-                    <div></div>
+                    <div />
                 </div>
                 <div className={classes.lineInfo}>
                     {t("amountProjects")}:
