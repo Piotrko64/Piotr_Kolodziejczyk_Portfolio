@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import { CookiePanel } from "../components/cookiePanel/CookiePanel";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 }}
             />
             <Component {...pageProps} /> <Analytics />
+            <CookiePanel />
         </>
     );
 }

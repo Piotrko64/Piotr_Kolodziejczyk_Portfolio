@@ -2,7 +2,7 @@
     z-index: 99999;
     position: fixed;
     right: -60px;
-    bottom: 10px;
+    bottom: 60px;
     border-radius: 50%;
     font-family: "Lato";
     text-transform: uppercase;
@@ -24,7 +24,7 @@
 }
 @media (max-width: 720px) {
     .langPanel {
-        bottom: 30px;
+        bottom: 90px;
         font-size: 0.95rem;
     }
 }

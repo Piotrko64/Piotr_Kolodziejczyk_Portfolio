@@ -1,0 +1,40 @@
+.panel {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #18181d;
+    z-index: 99999;
+    border-top: 2px solid rgb(173, 173, 173);
+}
+.button {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: var(--yellow);
+    color: black;
+    font-family: "Lato", sans-serif;
+    border: none;
+    cursor: pointer;
+    font-weight: 800;
+}
+@media (max-width: 570px) {
+    .panel {
+        padding: 8px;
+
+        gap: 10px;
+        font-size: 16px;
+
+        border-top: 2px solid rgb(173, 173, 173);
+    }
+    .button {
+        padding: 4px 8px;
+        font-size: 18px;
+    }
+}
