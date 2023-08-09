@@ -24,6 +24,10 @@
     background: var(--red);
 }
 
+h3 {
+    text-align: center;
+}
+
 html,
 body {
     padding: 0;
