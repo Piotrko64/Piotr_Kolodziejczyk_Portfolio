@@ -1,39 +1,33 @@
+import useTranslation from "next-translate/useTranslation";
 import { BigTitle } from "../../../ui/bigTitle/BigTitle";
 import { NextImage } from "../../../ui/images/NextImage";
 import classes from "./blog.module.css";
 import cx from "classnames";
 
 export function Blog() {
+    const { t } = useTranslation("blog");
+
     return (
         <>
-            <BigTitle title="Głodny Wiedzy?" />
+            <BigTitle title={t("title")} />
             <div className={cx(classes.rowFlex, "")}>
                 <div className="flexCenter">
-                    <h3> Zapraszam na mój profil na linkedinie! </h3>
+                    <h3> {t("h3")} </h3>
 
-                    <p className={classes.paragraph}>
-                        {" "}
-                        Swój profil na Linkedinie wzbogacam o cenne wpisy o
-                        tematyce związanej z JavaScriptem, Frontendem,
-                        Programowaniem i SEO. Prowadze w ten sposób bloga
-                        technicznego dzięki któremu mogę dzielić się już zdobytą
-                        wiedzą. Znajdziesz tam ciekawe posty mojego autorstwa
-                        poruszające zaawansowane jak i poboczne kwestie
-                        wcześniej wymienionych technologii.
-                    </p>
+                    <p className={classes.paragraph}>{t("description")}</p>
                     <a
                         href="https://www.linkedin.com/in/piotr-kołodziejczyk/"
                         target="_blank"
                         className={classes.linkButton}
                     >
-                        {" "}
-                        Przejdź na Linkedin{" "}
+                        {t("link")}
                     </a>
                 </div>
                 <NextImage
                     imgURL="/assets/blog/blog_linkedin.png"
                     additionalClass={cx(classes.imageBlog)}
                     modeContain
+                    title="Linkedin Blog"
                 />
             </div>
         </>
