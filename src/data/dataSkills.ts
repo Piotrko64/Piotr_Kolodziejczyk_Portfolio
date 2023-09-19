@@ -27,10 +27,7 @@ export const dataSkills = [
         name: "NextJs",
         iconName: "next.png",
     },
-    {
-        name: "Gatsby",
-        iconName: "gatsby.png",
-    },
+
     {
         name: "Redux",
         iconName: "redux.png",
@@ -42,6 +39,10 @@ export const dataSkills = [
     {
         name: "Vue",
         iconName: "vue.png",
+    },
+    {
+        name: "Angular",
+        iconName: "angular.png",
     },
     {
         name: "Cypress",
