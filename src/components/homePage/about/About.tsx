@@ -3,6 +3,7 @@ import { BigTitle } from "../../../ui/bigTitle/BigTitle";
 import { ImageSide } from "./subComponents/imageSide/ImageSide";
 import { TextSide } from "./subComponents/textSide/TextSide";
 import classes from "./about.module.css";
+import { MoreAboutMe } from "./subComponents/moreAboutMe/MoreAboutMe";
 
 export function About() {
     const { t } = useTranslation("titles");
@@ -13,6 +14,7 @@ export function About() {
                 <ImageSide />
                 <TextSide />
             </section>
+            {/* <MoreAboutMe /> */}
         </div>
     );
 }
