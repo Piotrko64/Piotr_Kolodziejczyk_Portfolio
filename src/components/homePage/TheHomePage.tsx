@@ -30,8 +30,9 @@ export function TheHomePage({ dataGithub, dataProjects }: Props) {
                     <About />
 
                     <GithubInviteMainComponent dataGithub={dataGithub} />
-                    <Cooperation />
                     <Blog />
+                    <Cooperation />
+
                     <Contact />
                     <Footer />
                 </>
