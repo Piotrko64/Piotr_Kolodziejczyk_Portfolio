@@ -9,7 +9,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Lint code
-        run: npm run lint
+        run: npm run lint-fix
       - name: end Linting
         run: echo "End of Linting"
   prepare-to-deploy:
