@@ -1,28 +1,18 @@
-name: Lint and correct code by eslint
-on: [push, workflow_dispatch]
+name: Deployment Exercise 1
+on: push
 jobs:
-  lint:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
         uses: actions/checkout@v3
       - name: Install dependencies
-        uses: npm ci
-      - name: Lint code
-        uses: npm run lint
-      - name: end Linting
-        uses: echo "End of Linting"
-  prepare-to-deploy:
-    needs: lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get code
-        uses: actions/checkout@v3
-      - name: Install dependencies
-        uses: npm ci
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Test code
+        run: npm run test
       - name: Build code
-        uses: npm run build
-      - name: end Linting
-        uses: echo "End of Building"
-    
-  
+        run: npm run build
+      - name: Deploy code
+        run: echo "Deploying..."
