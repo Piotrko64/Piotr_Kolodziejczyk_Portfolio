@@ -5,13 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
       - name: Install dependencies
-        uses: npm i
+        run: npm ci
       - name: Lint code
-        uses: npm run lint
+        run: npm run lint
       - name: end Linting
-        uses: echo "End of Linting"
+        run: echo "End of Linting"
   prepare-to-deploy:
     needs: lint
     runs-on: ubuntu-latest
@@ -19,9 +19,9 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Install dependencies
-        uses: npm ci
+        run: npm ci
       - name: Build code
-        uses: npm run build
+        run: npm run build
       - name: end Linting
-        uses: echo "End of Building"
+        run: echo "End of Building"
     
