@@ -12,5 +12,9 @@ jobs:
         run: npm run lint-fix
       - name: end Linting
         run: echo "End of Linting"
+      - name: commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: commit after lint
  
     
