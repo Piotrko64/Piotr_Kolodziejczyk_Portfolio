@@ -24,7 +24,7 @@ export function GithubInviteMainComponent({ dataGithub }: PropsGithubApi) {
                         <a
                             href="https://github.com/Piotrko64"
                             target={"_blank"}
-                            rel="noopener"
+                            rel="noopener noreferrer"
                         >
                             {t("visit")}
                         </a>

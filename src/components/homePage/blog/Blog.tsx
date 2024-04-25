@@ -18,7 +18,7 @@ export function Blog() {
                     <a
                         href="https://www.linkedin.com/in/piotr-kołodziejczyk/"
                         target="_blank"
-                        className={classes.linkButton}
+                        className={classes.linkButton} rel="noreferrer"
                     >
                         {t("link")}
                     </a>

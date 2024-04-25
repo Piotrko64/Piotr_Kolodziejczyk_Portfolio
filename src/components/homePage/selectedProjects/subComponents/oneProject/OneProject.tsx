@@ -60,7 +60,7 @@ export function OneProject({ dataProject, color }: Props) {
                                     href={dataProject.githubLink}
                                     className={classes.a}
                                     target="_blank"
-                                    rel="noopener"
+                                    rel="noopener noreferrer"
                                 >
                                     <NextImage
                                         imgURL="/assets/icons/githubIcon.png"
@@ -74,7 +74,7 @@ export function OneProject({ dataProject, color }: Props) {
                                     href={dataProject.liveLink}
                                     className={classes.a}
                                     target="_blank"
-                                    rel="noopener"
+                                    rel="noopener noreferrer"
                                 >
                                     <NextImage
                                         imgURL="/assets/icons/web.png"
