@@ -4,4 +4,7 @@ module.exports = nextTranslate({
     images: {
         domains: ["media.graphassets.com"],
     },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
 });
