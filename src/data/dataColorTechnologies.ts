@@ -83,16 +83,16 @@ export const dataColorTechnologies = [
 
     {
         name: "angular 16",
-        color: "#dd0031",
+        color: "linear-gradient(45deg, #dd0031, #c3002f, #a30027)",
     },
     {
         name: "angular 17",
-        color: "linear-gradient(45deg, #dd0031, #c3002f, #a30027)",
+        color: "linear-gradient(45deg, #ef3094, #f10c54, #b32cf2)",
     },
 
     {
         name: "angular",
-        color: "red",
+        color: "linear-gradient(45deg, #dd0031, #c3002f, #a30027)",
     },
 
     {
