@@ -98,7 +98,8 @@ export const dataColorTechnologies = [
     },
     {
         name: "javascript",
-        color: "#efd81d",
+        color: "#b79c31",
+        border: "#efd81d",
     },
     {
         name: "nodejs",
