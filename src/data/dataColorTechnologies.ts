@@ -80,10 +80,7 @@ export const dataColorTechnologies = [
         color: "#3f3d48",
         border: "white",
     },
-    {
-        name: "angular",
-        color: "red",
-    },
+
     {
         name: "angular 16",
         color: "#dd0031",
@@ -92,6 +89,12 @@ export const dataColorTechnologies = [
         name: "angular 17",
         color: "linear-gradient(45deg, #dd0031, #c3002f, #a30027)",
     },
+
+    {
+        name: "angular",
+        color: "red",
+    },
+
     {
         name: "single spa",
         color: "#303846",
