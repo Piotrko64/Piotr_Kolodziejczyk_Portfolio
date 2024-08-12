@@ -85,6 +85,22 @@ export const dataColorTechnologies = [
         color: "red",
     },
     {
+        name: "angular 16",
+        color: "#dd0031",
+    },
+    {
+        name: "angular 17",
+        color: "linear-gradient(45deg, #dd0031, #c3002f, #a30027)",
+    },
+    {
+        name: "single spa",
+        color: "#303846",
+    },
+    {
+        name: "javascript",
+        color: "#efd81d",
+    },
+    {
         name: "nodejs",
         color: "linear-gradient(25deg, rgba(68,182,58,1) 28%, rgba(43,157,40,1) 98%, rgba(252,199,43,1) 100%, rgba(187,187,130,1) 100%)",
     },
