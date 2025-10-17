@@ -1,7 +1,6 @@
 .size {
     height: 405px;
     aspect-ratio: 1;
-    border: 10px solid var(--mainBackColor);
     border-radius: 50%;
     animation: animPhoto 5s linear infinite;
     overflow: hidden;

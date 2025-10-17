@@ -49,12 +49,16 @@ export const dataSkills = [
         iconName: "cypress.png",
     },
     {
+        name: "Laravel",
+        iconName: "Laravel.png",
+    },
+    {
         name: "MongoDB",
         iconName: "mongo.png",
     },
     {
-        name: "MySQL",
-        iconName: "mysql.png",
+        name: "AWS AI",
+        iconName: "aws_ai.png",
     },
     {
         name: "Vitest",
@@ -67,5 +71,9 @@ export const dataSkills = [
     {
         name: "Git",
         iconName: "git.png",
+    },
+    {
+        name: "Wordpress",
+        iconName: "wp.png",
     },
 ];

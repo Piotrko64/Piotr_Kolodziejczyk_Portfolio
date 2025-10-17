@@ -10,14 +10,14 @@ export function TextSide() {
     return (
         <div className={classes.text}>
             <p>{t("text")}</p>
-            <a
+            {/* <a
                 href={GOOGLE_FORM_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={classes.linkButton}
             >
                 {t("form")}
-            </a>
+            </a> */}
         </div>
     );
 }

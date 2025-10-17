@@ -1,5 +1,5 @@
 .icon {
-    height: 75px;
+    height: 65px;
     aspect-ratio: 1;
     margin: 20px 40px;
 }
@@ -8,14 +8,14 @@
 }
 @media (max-width: 1320px) {
     .icon {
-        height: 70px;
+        height: 60px;
 
         margin: 20px 35px;
     }
 }
 @media (max-width: 980px) {
     .icon {
-        height: 65px;
+        height: 55px;
 
         margin: 15px 25px;
     }

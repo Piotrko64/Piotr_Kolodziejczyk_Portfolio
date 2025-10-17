@@ -34,7 +34,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Lato", sans-serif;
-    font-size: 26px;
+    font-size: 22px;
     background-color: var(--mainBackColor);
     color: var(--mainFontColor);
     min-height: 2100px;
@@ -116,6 +116,6 @@ section a:is(:active, :hover) {
 @media (max-width: 420px) {
     html,
     body {
-        font-size: 18.5px;
+        font-size: 18px;
     }
 }
